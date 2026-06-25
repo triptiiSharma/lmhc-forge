@@ -1,0 +1,17 @@
+# Windows CUDA build artifacts
+*.exe
+*.obj
+*.pdb
+
+# Scratch files
+prompt.txt
+cuda_probe.cu
+
+# Claude internal session data
+.claude/
+
+# macOS / editor
+.DS_Store
+*.swp
+__pycache__/
+*.pyc

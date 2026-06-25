@@ -1,0 +1,73 @@
+{
+  "file": "/opt/lmhc-forge/src/test_kernels.cu",
+  "pass": "conservative",
+  "kernels_found": 3,
+  "total_shared_buffers": 5,
+  "flagged_buffers": 5,
+  "kernels": [
+    {
+      "name": "attention_fwd",
+      "line": 29,
+      "shared_buffers": [
+        {
+          "name": "smem_qk",
+          "type": "float",
+          "nelems": "ATTN_SEQ * ATTN_HEAD",
+          "size_expr": "ATTN_SEQ * ATTN_HEAD",
+          "line": 30,
+          "sensitivity": "conservative"
+        },
+        {
+          "name": "smem_softmax",
+          "type": "float",
+          "nelems": "ATTN_SEQ",
+          "size_expr": "ATTN_SEQ",
+          "line": 31,
+          "sensitivity": "conservative"
+        }
+      ],
+      "explicit_returns": 0,
+      "single_exit": true
+    },
+    {
+      "name": "reduction_sum",
+      "line": 66,
+      "shared_buffers": [
+        {
+          "name": "smem_partial",
+          "type": "float",
+          "nelems": "RED_N",
+          "size_expr": "RED_N",
+          "line": 67,
+          "sensitivity": "conservative"
+        }
+      ],
+      "explicit_returns": 0,
+      "single_exit": true
+    },
+    {
+      "name": "gemm_tile",
+      "line": 91,
+      "shared_buffers": [
+        {
+          "name": "a_tile",
+          "type": "float",
+          "nelems": "GEMM_TILE * GEMM_TILE",
+          "size_expr": "GEMM_TILE * GEMM_TILE",
+          "line": 92,
+          "sensitivity": "conservative"
+        },
+        {
+          "name": "b_tile",
+          "type": "float",
+          "nelems": "GEMM_TILE * GEMM_TILE",
+          "size_expr": "GEMM_TILE * GEMM_TILE",
+          "line": 93,
+          "sensitivity": "conservative"
+        }
+      ],
+      "explicit_returns": 0,
+      "single_exit": true
+    }
+  ]
+}

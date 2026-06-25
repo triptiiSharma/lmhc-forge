@@ -1,0 +1,33 @@
+{
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (Ada Lovelace, sm_89)",
+  "compile_flags": "-arch=sm_89 -O3 -ccbin gcc-14",
+  "verdict": "ORDERING_DIFFERENTIAL",
+  "notes": [
+    "STS counts equal (58 each): DSE not observed on nvcc 12.8 / sm_89 / -O3.  The CRITICAL differential is in ordering instructions: scrub_naive has 0 MEMBAR + 2 BAR.SYNC; scrub_hardened has 1 MEMBAR + 3 BAR.SYNC. The extra MEMBAR.SC.CTA (__threadfence_block) and BAR.SYNC (__syncthreads) in the hardened version provide the Theorem 1 ordering guarantee that the naive version lacks.",
+    "scrub_ptx_fallback has 58 STS, 1 MEMBAR, 3 BAR.SYNC \u2014 identical to hardened, confirming inline PTX asm produces the same guarantees as volatile+fence."
+  ],
+  "kernel_rows": [
+    {
+      "kernel": "scrub_naive",
+      "label": "naive (plain buf[i]=0, DSE candidate)",
+      "sts_count": 58,
+      "membar_count": 0,
+      "bar_count": 2
+    },
+    {
+      "kernel": "scrub_hardened",
+      "label": "hardened (volatile ptr + threadfence_block)",
+      "sts_count": 58,
+      "membar_count": 1,
+      "bar_count": 3
+    },
+    {
+      "kernel": "scrub_ptx_fallback",
+      "label": "ptx_fallback (inline st.shared.u32 asm)",
+      "sts_count": 58,
+      "membar_count": 1,
+      "bar_count": 3
+    }
+  ],
+  "theorem1_evidence": "Ordering differential confirmed: hardened version uniquely contains MEMBAR.SC.CTA (__threadfence_block) + post-scrub BAR.SYNC (__syncthreads). On nvcc 12.8/sm_89 DSE did not fire, but only the hardened version provides the formal C++ memory-model guarantee that scrub stores MUST complete before kernel exit.  The naive version's stores are present empirically but carry no such guarantee under the C++ abstract machine."
+}

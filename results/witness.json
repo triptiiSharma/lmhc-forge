@@ -1,0 +1,40 @@
+{
+  "kernel_hash": "b916d3e73e5514759e65bd7b13e6ace55e4c2a2f0a06c723be5ed734697c416de5c984bdd4cffd08341563aecfcb83f3",
+  "policy_version": "lmhc-v1.0",
+  "sensitive_regions": [
+    {
+      "kernel": "attention_fwd",
+      "buffer": "smem_qk",
+      "type": "float",
+      "nelems": "ATTN_SEQ * ATTN_HEAD"
+    },
+    {
+      "kernel": "gemm_tile",
+      "buffer": "a_tile",
+      "type": "float",
+      "nelems": "GEMM_TILE * GEMM_TILE"
+    }
+  ],
+  "scrub_sites": [
+    {
+      "kernel": "gemm_tile",
+      "scrubbed_buffers": [
+        "a_tile"
+      ]
+    },
+    {
+      "kernel": "attention_fwd",
+      "scrubbed_buffers": [
+        "smem_qk"
+      ]
+    }
+  ],
+  "all_exits_protected": true,
+  "arch": "sm_89",
+  "compile_flags": "--cubin -arch=sm_89 -O3 -ccbin /usr/bin/gcc-14",
+  "source_file": "/opt/lmhc-forge/src/test_kernels.cu",
+  "cubin_size_bytes": 10656,
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (Ada Lovelace, sm_89)",
+  "generated_at": "2026-06-25T12:59:46.409288+00:00",
+  "_hash_construction": "SHA-384(cubin_bytes || json.dumps(policy_doc, sort_keys=True, separators=(',',':')).encode('utf-8'))"
+}
