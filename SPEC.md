@@ -176,3 +176,35 @@ colorblind-safe palette, captions stating hardware + N.
 
 Ask targeted questions ONLY if something is genuinely ambiguous before starting.
 Otherwise build Phase 0 completely, stop at the gate, and report with real output.
+
+---
+
+## POST-BUILD EXTENSION — Multi-GPU Replication Harness [COMPLETE — 2026-06-29]
+
+`multi_gpu/` was added after all modules above were verified. It is **additive
+only** — kernels, result files, and figures from Modules 1–7 / Phase 0 were not
+modified.
+
+**What it adds:**
+- `multi_gpu_repro.cu`: Unified CUDA harness (residue + control + LMHC scrub),
+  kernels byte-identical to `src/leakage_demo.cu` (static `__shared__ uint32_t
+  buf[NWORDS]`, same geometry, same `__launch_bounds__(32,1)`, same sentinel).
+  `%smid` is read per trial for co-residency verification (PTX ISA §9.4;
+  slightly perturbs scheduling, documented). Control runs FIRST (before any
+  writer kernel) to mirror the phase0_control.cu separation.
+- `run.sh`: One-shot build + run for collaborators. Handles paths with spaces,
+  auto-detects compute capability, writes timestamped run archives under
+  `runs/<TS>_<gpu>/` and copies JSON to `results/`.
+- `aggregate.py`: Reads `results/*.json`, emits Markdown / TSV / HTML table.
+- `report.py`: Per-device HTML report with EI bar chart (matplotlib or CSS fallback).
+- `INTERPRETATION.md`: Pre-committed outcome readings written before any
+  collaborator results were collected.
+
+**Verified on RTX 4050 Laptop GPU (sm_89, WSL2):**
+- EI_control = 0.0000 (validity gate passes)
+- EI_residue = 1.0000 (100% — matches `results/leakage_demo.json`)
+- EI_lmhc_scrub = 0.0000
+
+**Scope constraints (hard):** controlled-placement only; no natural-scheduling
+mode; no DSE characterization; no "modern GPUs" / "all NVIDIA GPUs" language;
+refer only to specific device names in the results table.

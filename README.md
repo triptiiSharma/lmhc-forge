@@ -159,12 +159,22 @@ lmhc-forge/
 ├── sass_dumps/
 │   └── dse_test.sass              cuobjdump -sass output for Module 3 kernels
 │
-└── figures/
-    ├── fig1_phase0_heatmap.{png,pdf}      Phase 0 residue heatmap (64×64 word grid)
-    ├── fig2_dse_differential.{png,pdf}    Module 3 STS/MEMBAR/BAR.SYNC bar + SASS excerpt
-    ├── fig3_exposure_index.{png,pdf}      Module 6 EI before/after
-    ├── fig4_benchmark.{png,pdf}           Module 7 overhead upper bounds
-    └── fig5_tamper_panel.{png,pdf}        Module 5 T1–T6 PASS/FAIL matrix
+├── figures/
+│   ├── fig1_phase0_heatmap.{png,pdf}      Phase 0 residue heatmap (64×64 word grid)
+│   ├── fig2_dse_differential.{png,pdf}    Module 3 STS/MEMBAR/BAR.SYNC bar + SASS excerpt
+│   ├── fig3_exposure_index.{png,pdf}      Module 6 EI before/after
+│   ├── fig4_benchmark.{png,pdf}           Module 7 overhead upper bounds
+│   └── fig5_tamper_panel.{png,pdf}        Module 5 T1–T6 PASS/FAIL matrix
+│
+└── multi_gpu/                             Multi-GPU replication harness (additive)
+    ├── multi_gpu_repro.cu                 CUDA harness — byte-identical kernels to src/leakage_demo.cu
+    ├── run.sh                             One-shot build + run for collaborators (bash run.sh)
+    ├── aggregate.py                       Aggregate per-device JSONs → Markdown / TSV / HTML table
+    ├── report.py                          Per-device HTML report with EI bar chart
+    ├── INTERPRETATION.md                  Pre-committed outcome readings (written before results)
+    ├── README.md                          Setup, schema, and scope documentation
+    ├── results/                           Per-device JSON files (place collaborator outputs here)
+    └── runs/                              Timestamped run archives (JSON + stderr.log + metadata)
 ```
 
 ---
@@ -210,6 +220,42 @@ Expected wall time: approximately 5–10 minutes (dominated by GPU warm-up and t
 | `fig5_tamper_panel` | T1–T6 matrix: test description, CHECK 1/2/3 outcome, verdict; T6 highlighted as known limitation |
 
 All figures: 300-dpi PNG + vector PDF, Okabe-Ito colorblind-safe palette, hardware and trial count in every caption.
+
+---
+
+## Multi-GPU Replication
+
+The `multi_gpu/` directory contains an additive harness that replicates the
+residue / LMHC-mitigation measurement from `src/leakage_demo.cu` on any NVIDIA
+GPU a collaborator can access. It does **not** modify any single-GPU experiment,
+result file, or figure.
+
+Kernels are byte-identical to `src/leakage_demo.cu` (same `__shared__` geometry,
+same sentinel, same `__launch_bounds__(32,1)` forced co-residency, same N=200
+default). The only addition is `%smid` verification per trial and per-device JSON
+output.
+
+**One-command collaborator flow (inside WSL2):**
+
+```bash
+cd multi_gpu
+bash run.sh    # auto-detects arch, compiles, runs 3 phases, saves JSON + run log
+```
+
+**Aggregating results from multiple devices:**
+
+```bash
+python3 multi_gpu/aggregate.py
+python3 multi_gpu/aggregate.py --html multi_gpu_results.html
+```
+
+See `multi_gpu/README.md` for full setup, JSON schema, and scope constraints.
+See `multi_gpu/INTERPRETATION.md` for pre-committed outcome readings written
+before any collaborator results were collected.
+
+> These results are controlled-placement measurements (forced co-residency on
+> every device). No result from this harness is a claim about natural-scheduling
+> frequencies or about devices not listed in the results table.
 
 ---
 
