@@ -106,10 +106,12 @@ correctness."
 **Artifact count**: 55 configurations across 13 defined cases (N0–N12);
 54 `REAL_COMPILED_CASE` + 1 `REAL_BINARY_INPUT_CASE`; 0
 `SYNTHETIC_TEST_ONLY` pooled.
-**Result**: 47/48 dedicated-case configurations conform exactly to their
-intended structural condition (100% cross-tool agreement on every one).
-The remaining 8 (all case N6) are a distinct, documented finding — see
-Claim 7.
+**Result**: 47/55 total configurations conform exactly to their intended
+structural condition (40/48 dedicated-case configurations + 7/7
+reference/N11 configurations), with 100% cross-tool agreement on every
+configuration regardless of conformance outcome. The remaining 8 (all of
+case N6's 8 configurations — not spread across multiple cases) are a
+distinct, documented finding — see Claim 7.
 **Limitation**: "conformance" means the compiled binary matches the
 intended structural condition, checked by both parsing paths — it is not
 a general accuracy statement about the checker.
@@ -117,8 +119,10 @@ a general accuracy statement about the checker.
 **Safe wording**: "A controlled corpus of 13 structural cases, realized
 as genuine compiled source across both CUDA toolkits, two ptxas
 optimization levels, and two architectures (55 configurations total),
-showed the expected structural condition in 47 of 48 dedicated
-configurations; the remaining case is discussed separately."
+showed the expected structural condition in 47 of 55 configurations
+(40 of 48 dedicated-case configurations, plus all 7 reference/N11
+configurations); the remaining 8 configurations, all one case (N6), are
+discussed separately."
 
 **Overclaiming wording to avoid**: "The checker was validated against 13
 test cases with 96% accuracy" — this is conformance to intended

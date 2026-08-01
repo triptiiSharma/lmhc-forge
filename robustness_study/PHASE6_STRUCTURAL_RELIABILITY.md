@@ -66,10 +66,15 @@ contains no accuracy, precision/recall/F1, or false-accept-rate claim.
   (mangled vs. demangled name); traced to raw SASS, confirmed the tested
   `sass_parser.py`/`classify_binary.py` were not at fault, fixed in the
   harness. Documented in full in `PHASE5_CONTROLLED_CASES.md`.
-- **Expected structural condition vs. observed**: 47/48 dedicated
-  configurations (all of N3, N4, N5, N7, N8) conform exactly to their
-  intended condition, with 8/8 cross-tool agreement each. **N6 (8/8
-  configs) is a genuine, evidenced finding, not a defect**: source has a
+- **Expected structural condition vs. observed**: of the 55 total
+  configurations (48 dedicated + 6 core-matrix references + 1 N11),
+  **47/55 conform** exactly to their intended condition. Broken out by
+  type: **40/48 dedicated configurations** conform (all of N3, N4, N5,
+  N7, N8 — 5 cases × 8 configs each — with 8/8 cross-tool agreement per
+  case), and **7/7 reference/N11 configurations** conform. The remaining
+  **8/55 non-conforming configurations are all case N6** (its full 8
+  configurations), not a defect spread across multiple cases. **N6 is a
+  genuine, evidenced finding, not a defect**: source has a
   divergent early return leaving one cleanup path uncovered for half the
   threads, but ptxas compiled this to a **single** `EXIT` via predication
   — both parsing paths correctly and identically report `FULL_SIGNATURE`
