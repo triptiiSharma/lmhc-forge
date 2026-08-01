@@ -1,5 +1,14 @@
 # PHASE5_REVIEW_CODEBOOK.md
 
+> **STATUS: CANCELLED_BY_STUDY_DECISION.** This codebook was never given to
+> any reviewer — the study decided not to conduct human review. Archived
+> for provenance only; see `phase5_review/README_NOT_USED.md`. The category
+> definitions below (operational meaning of FULL_SIGNATURE/PARTIAL_SIGNATURE/
+> STORE_ONLY/ABSENT/UNDECIDABLE) remain the authoritative definitions used
+> by the automated checker and by `PHASE5_CROSS_TOOL_VALIDATION.md` and
+> `PHASE5_CONTROLLED_CASES.md`, so this document is still referenced, just
+> not as a human-review artifact.
+
 Given verbatim to both reviewers before labeling starts. The wording here
 must match `PLAN.md §5`'s classifier rules exactly, so that any
 disagreement between a reviewer and the automated checker reflects a

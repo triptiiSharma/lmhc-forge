@@ -1,5 +1,16 @@
 # PHASE5_SAMPLE_DESIGN.md
 
+> **STATUS: CANCELLED_BY_STUDY_DECISION.** The human-review plan described
+> in this document was never executed — the study decided not to conduct
+> human review. The packet described here is archived for provenance only
+> (see `phase5_review/README_NOT_USED.md`) and must not be treated as
+> completed evidence or included in the paper's results. Phase 5/6 were
+> replaced with automated validation — see `PHASE5_CROSS_TOOL_VALIDATION.md`,
+> `PHASE5_CONTROLLED_CASES.md`, `PHASE5_REPRODUCIBILITY.md`,
+> `PHASE5_RUNTIME_SANITY.md`, `PHASE6_STRUCTURAL_RELIABILITY.md`. The rest
+> of this document is preserved unmodified as a record of the (unused)
+> blinding methodology.
+
 **Status: corrected sample generated, genuinely blinded, audit PASSED.
 Labeling NOT started.** This document supersedes its first version, which
 described a sample that leaked construct/context/arch/opt columns directly

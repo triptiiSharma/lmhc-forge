@@ -1,5 +1,12 @@
 # PHASE5_BLINDING_AUDIT.md
 
+> **STATUS: CANCELLED_BY_STUDY_DECISION.** The packet audited here was
+> never used for human review — the study decided not to conduct human
+> review. Archived for provenance only; see
+> `phase5_review/README_NOT_USED.md`. This document remains a valid,
+> useful record of the blinding methodology and the real leak it found and
+> fixed, independent of whether the packet was ultimately used.
+
 ## Why this document exists
 
 The first version of the Phase 5 packet (`results/validation_sample.csv`,
