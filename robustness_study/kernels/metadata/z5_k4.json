@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z5",
+  "construct_name": "hardened_lmhc",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K4",
+  "context_name": "tiled_gemm_like",
+  "context_based_on": "test_kernels.cu: gemm_tile; a_tile (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z5_k4",
+  "source_file": "kernels/generated/z5_k4.cu",
+  "source_hash_sha256": "db3581d315276ee7a934d1cee7dab05a903ef0a0a284e8d8a5aac62a3ecffc8a"
+}

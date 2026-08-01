@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z0",
+  "construct_name": "no_scrub",
+  "construct_role": "negative_control",
+  "expected_structural_requirement": "none \u2014 ABSENT is the correct classification",
+  "context_id": "K5",
+  "context_name": "attention_style",
+  "context_based_on": "test_kernels.cu: attention_fwd; smem_qk (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 64,
+  "sbuf_nwords": 2048,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z0_k5",
+  "source_file": "kernels/generated/z0_k5.cu",
+  "source_hash_sha256": "12fd61a73c84c39402548cf7079765abb1d25af3d99733c679e475c418e45c78"
+}

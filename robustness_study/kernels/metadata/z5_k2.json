@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z5",
+  "construct_name": "hardened_lmhc",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K2",
+  "context_name": "fill_use_then_scrub",
+  "context_based_on": "dse_test.cu: scrub_naive / scrub_hardened (exact shape)",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z5_k2",
+  "source_file": "kernels/generated/z5_k2.cu",
+  "source_hash_sha256": "12e8d0dff804841cf8b75ab94ea98491b83b1f3b3955ee7790dbdc5ceb9cf655"
+}

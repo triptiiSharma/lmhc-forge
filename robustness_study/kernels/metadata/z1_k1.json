@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z1",
+  "construct_name": "plain_zeroing_loop",
+  "construct_role": "primary_variable",
+  "expected_structural_requirement": "zero-stores present or eliminated (compiler-dependent; this is what's measured)",
+  "context_id": "K1",
+  "context_name": "fill_then_scrub",
+  "context_based_on": "dse_minimal.cu fill phase (nosync_*), output made independent of buf per task's K1 definition",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z1_k1",
+  "source_file": "kernels/generated/z1_k1.cu",
+  "source_hash_sha256": "3c4891400fe00cacab99d2b60009fded0fb30189bdbe8f154fbd1ece3cbfa8b4"
+}

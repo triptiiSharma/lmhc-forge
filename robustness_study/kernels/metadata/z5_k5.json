@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z5",
+  "construct_name": "hardened_lmhc",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K5",
+  "context_name": "attention_style",
+  "context_based_on": "test_kernels.cu: attention_fwd; smem_qk (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 64,
+  "sbuf_nwords": 2048,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z5_k5",
+  "source_file": "kernels/generated/z5_k5.cu",
+  "source_hash_sha256": "4c421d7c5b077afdd24a71fabb49fcd04f3596c75a62b75a6622a6649832d7de"
+}

@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z3",
+  "construct_name": "plain_loop_plus_barrier",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present-or-eliminated + BAR.SYNC; no MEMBAR.SC.CTA",
+  "context_id": "K0",
+  "context_name": "pure_dead_allocation",
+  "context_based_on": "dse_minimal.cu: pure_dead_naive / pure_dead_volatile",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z3_k0",
+  "source_file": "kernels/generated/z3_k0.cu",
+  "source_hash_sha256": "ce58fb378cdd88c85a909e1e0157ddd680f8bb9d7a214d0ba12fd5249b0e05fb"
+}

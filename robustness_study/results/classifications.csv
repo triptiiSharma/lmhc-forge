@@ -1,0 +1,43 @@
+artifact_id,zeroization_construct,kernel_context,target_arch,cuda_version,ptxas_optimization,source_intent_label,checker_verdict,checker_detail,multi_exit_scope_assumed,analysis_time_ms
+e14d90f237ffb9c5,Z0,K0,sm_86,cuda-12.8,0,Z0,ABSENT,no zero-valued shared store (STS…RZ) found,False,4
+8cd05302f71d806b,Z0,K0,sm_86,cuda-12.8,3,Z0,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+8897ed33731bc763,Z0,K0,sm_89,cuda-12.8,0,Z0,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+ee76be3ecd626bf9,Z0,K0,sm_89,cuda-12.8,3,Z0,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+09ae942d0824dbc4,Z0,K2,sm_86,cuda-12.8,0,Z0,ABSENT,no zero-valued shared store (STS…RZ) found (5 nonzero/unclassified shared store(s) present — see parser_warnings),False,5
+570e27529e0ef15a,Z0,K2,sm_86,cuda-12.8,3,Z0,ABSENT,no zero-valued shared store (STS…RZ) found (29 nonzero/unclassified shared store(s) present — see parser_warnings),False,7
+9a8d6ac400de2dcd,Z0,K2,sm_89,cuda-12.8,0,Z0,ABSENT,no zero-valued shared store (STS…RZ) found (5 nonzero/unclassified shared store(s) present — see parser_warnings),False,7
+0d530004832fd15e,Z0,K2,sm_89,cuda-12.8,3,Z0,ABSENT,no zero-valued shared store (STS…RZ) found (29 nonzero/unclassified shared store(s) present — see parser_warnings),False,5
+8131f5bd26f914e2,Z1,K0,sm_86,cuda-12.8,0,Z1,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+c2b5e5b9d351bfef,Z1,K0,sm_86,cuda-12.8,3,Z1,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+a902858f8d8c6e4c,Z1,K0,sm_89,cuda-12.8,0,Z1,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+8ce0a8d71c9cc62f,Z1,K0,sm_89,cuda-12.8,3,Z1,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+2d52334b1675db5d,Z1,K2,sm_86,cuda-12.8,0,Z1,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,5
+96cac39144c09b8f,Z1,K2,sm_86,cuda-12.8,3,Z1,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,7
+a7eb78d0d0141e73,Z1,K2,sm_89,cuda-12.8,0,Z1,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,6
+1d587935e66f00b4,Z1,K2,sm_89,cuda-12.8,3,Z1,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,7
+67da7a670d7f382f,Z2,K0,sm_86,cuda-12.8,0,Z2,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",False,4
+5ba76c39448bf6df,Z2,K0,sm_86,cuda-12.8,3,Z2,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",False,3
+68095e2970648212,Z2,K0,sm_89,cuda-12.8,0,Z2,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",False,4
+9369830b6bfd5475,Z2,K0,sm_89,cuda-12.8,3,Z2,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",False,4
+807a665fcc10184a,Z2,K2,sm_86,cuda-12.8,0,Z2,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,6
+cbb9cee5c5df354c,Z2,K2,sm_86,cuda-12.8,3,Z2,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,6
+dd593d222cd4ab97,Z2,K2,sm_89,cuda-12.8,0,Z2,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,6
+aaee3d3b57a0cfe8,Z2,K2,sm_89,cuda-12.8,3,Z2,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,7
+e8ce813e5a101229,Z5,K0,sm_86,cuda-12.8,0,Z5,FULL_SIGNATURE,store@79 < membar@87 < bar@89 < exit@90,False,4
+d754bbe9a60799cd,Z5,K0,sm_86,cuda-12.8,3,Z5,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,False,4
+415b74faa9990461,Z5,K0,sm_89,cuda-12.8,0,Z5,FULL_SIGNATURE,store@79 < membar@87 < bar@89 < exit@90,False,4
+cfaa2e9beccb6949,Z5,K0,sm_89,cuda-12.8,3,Z5,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,False,4
+86e920156718d4a2,Z5,K2,sm_86,cuda-12.8,0,Z5,FULL_SIGNATURE,store@164 < membar@172 < bar@174 < exit@175,False,5
+db816e73c95d6299,Z5,K2,sm_86,cuda-12.8,3,Z5,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,False,6
+1028ab6c20b2e506,Z5,K2,sm_89,cuda-12.8,0,Z5,FULL_SIGNATURE,store@164 < membar@172 < bar@174 < exit@175,False,6
+11fc489f58597bd6,Z5,K2,sm_89,cuda-12.8,3,Z5,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,False,7
+a823462fad97b284,Z6,K0,sm_86,cuda-12.8,0,Z6,FULL_SIGNATURE,store@78 < membar@86 < bar@88 < exit@89,False,4
+cfa83bab81b4dd5c,Z6,K0,sm_86,cuda-12.8,3,Z6,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,False,4
+f3d2eba38abf5f34,Z6,K0,sm_89,cuda-12.8,0,Z6,FULL_SIGNATURE,store@78 < membar@86 < bar@88 < exit@89,False,4
+9408de52a37b4316,Z6,K0,sm_89,cuda-12.8,3,Z6,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,False,5
+e4d3e0643391de4a,Z6,K2,sm_86,cuda-12.8,0,Z6,FULL_SIGNATURE,store@163 < membar@171 < bar@173 < exit@174,False,6
+5b26e635e7c70f9b,Z6,K2,sm_86,cuda-12.8,3,Z6,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,False,6
+e2904d4e4c7b9e14,Z6,K2,sm_89,cuda-12.8,0,Z6,FULL_SIGNATURE,store@163 < membar@171 < bar@173 < exit@174,False,6
+8072dcbabe846af9,Z6,K2,sm_89,cuda-12.8,3,Z6,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,False,7
+bb18ea158bccf4eb,Z1,K0,sm_89,cuda-12.8,3,Z1,ABSENT,no zero-valued shared store (STS…RZ) found,False,3
+0cb004f15d21c14f,Z2,K3,sm_89,cuda-12.8,3,Z2,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",False,5

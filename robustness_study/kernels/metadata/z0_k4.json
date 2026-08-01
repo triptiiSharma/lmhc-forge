@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z0",
+  "construct_name": "no_scrub",
+  "construct_role": "negative_control",
+  "expected_structural_requirement": "none \u2014 ABSENT is the correct classification",
+  "context_id": "K4",
+  "context_name": "tiled_gemm_like",
+  "context_based_on": "test_kernels.cu: gemm_tile; a_tile (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z0_k4",
+  "source_file": "kernels/generated/z0_k4.cu",
+  "source_hash_sha256": "91ad0b16a781e9884b4f95bd866eb0aecebdd6561b0ad4f14f7b624b5e72bcc9"
+}

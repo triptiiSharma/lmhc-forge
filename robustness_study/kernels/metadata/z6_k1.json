@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K1",
+  "context_name": "fill_then_scrub",
+  "context_based_on": "dse_minimal.cu fill phase (nosync_*), output made independent of buf per task's K1 definition",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z6_k1",
+  "source_file": "kernels/generated/z6_k1.cu",
+  "source_hash_sha256": "f1133baa549dadc12a226993f40e0781289d58bcf92103c5d26bab294df02f5a"
+}

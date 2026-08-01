@@ -1,0 +1,32 @@
+{
+  "name": "core",
+  "description": "PLAN.md §3 core matrix: 7 constructs x 6 contexts x 4 ptxas opt levels x 6 archs x 2 toolkits = 2016.",
+  "host_optimization": "-O3",
+  "toolkits": [
+    {
+      "id": "cuda-12.8",
+      "nvcc": "/usr/local/cuda-12.8/bin/nvcc",
+      "cuobjdump": "/usr/local/cuda-12.8/bin/cuobjdump",
+      "host_compiler": "gcc-14"
+    },
+    {
+      "id": "cuda-13.3",
+      "nvcc": "/usr/local/cuda-13.3/bin/nvcc",
+      "cuobjdump": "/usr/local/cuda-13.3/bin/cuobjdump",
+      "host_compiler": "gcc-14"
+    }
+  ],
+  "archs": ["sm_75", "sm_80", "sm_86", "sm_87", "sm_89", "sm_90"],
+  "ptxas_opt_levels": [0, 1, 2, 3],
+  "pairs": [
+    ["Z0","K0"],["Z0","K1"],["Z0","K2"],["Z0","K3"],["Z0","K4"],["Z0","K5"],
+    ["Z1","K0"],["Z1","K1"],["Z1","K2"],["Z1","K3"],["Z1","K4"],["Z1","K5"],
+    ["Z2","K0"],["Z2","K1"],["Z2","K2"],["Z2","K3"],["Z2","K4"],["Z2","K5"],
+    ["Z3","K0"],["Z3","K1"],["Z3","K2"],["Z3","K3"],["Z3","K4"],["Z3","K5"],
+    ["Z4","K0"],["Z4","K1"],["Z4","K2"],["Z4","K3"],["Z4","K4"],["Z4","K5"],
+    ["Z5","K0"],["Z5","K1"],["Z5","K2"],["Z5","K3"],["Z5","K4"],["Z5","K5"],
+    ["Z6","K0"],["Z6","K1"],["Z6","K2"],["Z6","K3"],["Z6","K4"],["Z6","K5"]
+  ],
+  "note_sm70_substitution": "sm_70 is in the task brief's preferred list but unsupported by CUDA 13.3 (AUDIT.md §4.4); sm_87 substitutes it here, approved by user 2026-08-01.",
+  "note_only_sm89_has_hardware": "Only sm_89 (RTX 4050 Laptop) has matching physical hardware; sm_75/80/86/87/90 are compile-target evidence only, never runtime-validated by this study."
+}

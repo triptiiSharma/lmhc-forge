@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z4",
+  "construct_name": "volatile_loop_plus_barrier",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present + BAR.SYNC; no MEMBAR.SC.CTA",
+  "context_id": "K5",
+  "context_name": "attention_style",
+  "context_based_on": "test_kernels.cu: attention_fwd; smem_qk (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 64,
+  "sbuf_nwords": 2048,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z4_k5",
+  "source_file": "kernels/generated/z4_k5.cu",
+  "source_hash_sha256": "1819a59af35a1b823190c8697ad1fe378c0b0354cbd8ee239f95ab3944758553"
+}

@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z2",
+  "construct_name": "volatile_zeroing_loop",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present; no fence/barrier ordering signature",
+  "context_id": "K0",
+  "context_name": "pure_dead_allocation",
+  "context_based_on": "dse_minimal.cu: pure_dead_naive / pure_dead_volatile",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z2_k0",
+  "source_file": "kernels/generated/z2_k0.cu",
+  "source_hash_sha256": "079c998f5824bf5aaea158d3b632b3cebba0f8941e3e45f84ebd880b12592f43"
+}

@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z0",
+  "construct_name": "no_scrub",
+  "construct_role": "negative_control",
+  "expected_structural_requirement": "none \u2014 ABSENT is the correct classification",
+  "context_id": "K0",
+  "context_name": "pure_dead_allocation",
+  "context_based_on": "dse_minimal.cu: pure_dead_naive / pure_dead_volatile",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z0_k0",
+  "source_file": "kernels/generated/z0_k0.cu",
+  "source_hash_sha256": "c9d26952c5801c5c9c0154550b94e94376a1372dedcbfe3ca73b23509dcd92a0"
+}

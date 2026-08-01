@@ -1,0 +1,120 @@
+{
+  "total_records": 42,
+  "by_compile_status": {
+    "COMPILE_OK": 42
+  },
+  "by_compile_status_and_construct": {
+    "Z0": {
+      "COMPILE_OK": 8
+    },
+    "Z1": {
+      "COMPILE_OK": 9
+    },
+    "Z2": {
+      "COMPILE_OK": 9
+    },
+    "Z5": {
+      "COMPILE_OK": 8
+    },
+    "Z6": {
+      "COMPILE_OK": 8
+    }
+  },
+  "by_compile_status_and_context": {
+    "K0": {
+      "COMPILE_OK": 21
+    },
+    "K2": {
+      "COMPILE_OK": 20
+    },
+    "K3": {
+      "COMPILE_OK": 1
+    }
+  },
+  "by_compile_status_and_arch": {
+    "sm_86": {
+      "COMPILE_OK": 20
+    },
+    "sm_89": {
+      "COMPILE_OK": 22
+    }
+  },
+  "by_compile_status_and_toolkit": {
+    "cuda-12.8": {
+      "COMPILE_OK": 42
+    }
+  },
+  "checker_verdict_counts": {
+    "ABSENT": 13,
+    "PARTIAL_SIGNATURE": 9,
+    "STORE_ONLY": 4,
+    "FULL_SIGNATURE": 16
+  },
+  "checker_verdict_by_construct": {
+    "Z0": {
+      "ABSENT": 8
+    },
+    "Z1": {
+      "ABSENT": 5,
+      "PARTIAL_SIGNATURE": 4
+    },
+    "Z2": {
+      "STORE_ONLY": 4,
+      "PARTIAL_SIGNATURE": 5
+    },
+    "Z5": {
+      "FULL_SIGNATURE": 8
+    },
+    "Z6": {
+      "FULL_SIGNATURE": 8
+    }
+  },
+  "checker_verdict_by_context": {
+    "K0": {
+      "ABSENT": 9,
+      "STORE_ONLY": 4,
+      "FULL_SIGNATURE": 8
+    },
+    "K2": {
+      "ABSENT": 4,
+      "PARTIAL_SIGNATURE": 8,
+      "FULL_SIGNATURE": 8
+    },
+    "K3": {
+      "PARTIAL_SIGNATURE": 1
+    }
+  },
+  "scalability": {
+    "compile_time_ms": {
+      "n": 42,
+      "min": 291,
+      "max": 770,
+      "mean": 335.69,
+      "median": 308.0
+    },
+    "cubin_size_bytes": {
+      "n": 42,
+      "min": 2856,
+      "max": 6304,
+      "mean": 4653.9,
+      "median": 4448.0
+    },
+    "sass_size_bytes": {
+      "n": 42,
+      "min": 5069,
+      "max": 52141,
+      "mean": 28389.48,
+      "median": 24501.0
+    },
+    "analysis_time_ms": {
+      "n": 42,
+      "min": 3,
+      "max": 7,
+      "mean": 4.86,
+      "median": 5.0
+    }
+  },
+  "manual_review_status_counts": {
+    "not_reviewed": 42
+  }
+}

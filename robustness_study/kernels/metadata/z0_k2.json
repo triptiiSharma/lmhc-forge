@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z0",
+  "construct_name": "no_scrub",
+  "construct_role": "negative_control",
+  "expected_structural_requirement": "none \u2014 ABSENT is the correct classification",
+  "context_id": "K2",
+  "context_name": "fill_use_then_scrub",
+  "context_based_on": "dse_test.cu: scrub_naive / scrub_hardened (exact shape)",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z0_k2",
+  "source_file": "kernels/generated/z0_k2.cu",
+  "source_hash_sha256": "a98130423905472e0db964474685bbd06c0fbc6f15e2999ba7ef1b390197f1f1"
+}

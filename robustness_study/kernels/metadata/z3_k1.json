@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z3",
+  "construct_name": "plain_loop_plus_barrier",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present-or-eliminated + BAR.SYNC; no MEMBAR.SC.CTA",
+  "context_id": "K1",
+  "context_name": "fill_then_scrub",
+  "context_based_on": "dse_minimal.cu fill phase (nosync_*), output made independent of buf per task's K1 definition",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z3_k1",
+  "source_file": "kernels/generated/z3_k1.cu",
+  "source_hash_sha256": "b800fea0fcfa39ba5222cd422e1c80a3b597297bd290e22eebabc5dbf3af911b"
+}

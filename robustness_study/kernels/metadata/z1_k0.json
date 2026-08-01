@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z1",
+  "construct_name": "plain_zeroing_loop",
+  "construct_role": "primary_variable",
+  "expected_structural_requirement": "zero-stores present or eliminated (compiler-dependent; this is what's measured)",
+  "context_id": "K0",
+  "context_name": "pure_dead_allocation",
+  "context_based_on": "dse_minimal.cu: pure_dead_naive / pure_dead_volatile",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z1_k0",
+  "source_file": "kernels/generated/z1_k0.cu",
+  "source_hash_sha256": "06ef613a3c5fc79a2b508f9e3f2d383b897617c32f216d395048c97fb0175fa9"
+}
