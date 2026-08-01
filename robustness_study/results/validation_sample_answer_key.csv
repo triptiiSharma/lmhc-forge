@@ -1,0 +1,255 @@
+artifact_id,selection_reason,checker_verdict,checker_detail,source_intent_label
+002cb6ffa3991882,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+0120930a31402884,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+02174bbaac221ec6,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+0308149a3365bd5d,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+07ec6f96b3ed1d49,tier2_base_stratified,FULL_SIGNATURE,store@227 < membar@229 < bar@230 < exit@231,Z5
+0828c643e46a5a83,tier2_base_stratified,FULL_SIGNATURE,"store@164 < membar@168 < bar@169 < every relevant EXIT [170, 175] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z5
+09cb281bcc73e2a3,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+0ad14b7ab03f357c,tier3_underverified_arch_sm_90,FULL_SIGNATURE,store@219 < membar@221 < bar@222 < exit@223,Z6
+0ad3a717486f318b,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+0b0267b987c4816d,tier3_underverified_arch_sm_75,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+0b6d860f4c6430b6,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+0cb004f15d21c14f,tier1_flag_recheck,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+0de1f928ec398c84,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+0e6568183c4e2bde,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+0ec480507c13484f,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+0fe8bf28ef0f313a,tier2_base_stratified,FULL_SIGNATURE,store@96 < membar@98 < bar@99 < exit@100,Z6
+1028ab6c20b2e506,tier2_base_stratified,FULL_SIGNATURE,store@164 < membar@172 < bar@174 < exit@175,Z5
+10b51e18144405a3,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+11040b4e138ec474,tier2_base_stratified,FULL_SIGNATURE,store@161 < membar@169 < bar@171 < exit@172,Z6
+11fc489f58597bd6,tier2_base_stratified,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,Z5
+1483c9057eea40af,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+14866afe5b738c3b,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+14c865507b510ab7,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+155ec64d7cd7ebc7,tier2_base_stratified,FULL_SIGNATURE,store@98 < membar@102 < bar@103 < exit@104,Z5
+168ab6845fe9fcb9,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (29 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+173f2545ae04c6eb,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+1809e543b4ea3a49,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+18e718e0f54b3fcf,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+198b3c99eca6e1f9,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+1ab4900259a3ba95,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+1b2a34ea3881f7d2,tier2_base_stratified,FULL_SIGNATURE,store@207 < membar@209 < bar@210 < exit@211,Z6
+1b9516c1564c348e,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+1c60f8cfac4ab009,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+1c7ef9f9d49c39ce,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+1dfb0f857be78617,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+1f6b8a03274970e2,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (5 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+1f944e8878dac9a5,tier2_base_stratified,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+1fb48325a8fa95c9,tier2_base_stratified,FULL_SIGNATURE,store@214 < membar@222 < bar@224 < exit@225,Z5
+20421c460940fa6c,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+21f40ec977fa825b,tier3_underverified_arch_sm_75,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+23c4c6b98ac6f33d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+266d73111e356d9c,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+2a4db499f694bb94,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+2a5f80ac20c2452c,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+2baffe6e5c975ee9,tier2_base_stratified,FULL_SIGNATURE,store@172 < membar@180 < bar@182 < exit@183,Z6
+2ccad62686715c7b,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+2d954dc64d20c8e9,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+2f11a1cc9912ab33,tier2_base_stratified,FULL_SIGNATURE,store@553 < membar@561 < bar@563 < exit@564,Z6
+30f58fb68cfab190,tier2_base_stratified,FULL_SIGNATURE,store@54 < membar@58 < bar@59 < exit@60,Z6
+3161d5678617f1a7,tier2_base_stratified,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+333e56d3f7855305,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+33ee595ac67692a3,tier2_base_stratified,FULL_SIGNATURE,store@221 < membar@229 < bar@231 < exit@232,Z6
+34788d210f600801,tier3_underverified_arch_sm_75,FULL_SIGNATURE,store@86 < membar@90 < bar@91 < exit@92,Z6
+34cc251c21883b0e,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+34d339239b791f47,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+362156a0050256a7,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+36b2a905c888285f,tier2_base_stratified,FULL_SIGNATURE,"store@119 < membar@123 < bar@124 < every relevant EXIT [127, 132] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z6
+371a41ae091686b0,tier2_base_stratified,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,Z5
+381319a3f7a34a09,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+3a11c3cb415db243,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+3ae23a09824d6b08,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+3c52f9b7dfcb8a62,tier3_multi_exit_ge3,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+3ec6da44c6e4f3da,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+3ecb9bb356054a29,tier3_underverified_arch_sm_75,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+4023999beeb25b3b,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+417f9ccd785c7fc2,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+423f35fda488554f,tier2_base_stratified,FULL_SIGNATURE,store@179 < membar@187 < bar@189 < exit@190,Z5
+42e79d8c0273be84,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+45392cb611da863b,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+45b8c02d0c7b01d5,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+47587dbc6aaf57b2,tier2_base_stratified,FULL_SIGNATURE,store@98 < membar@102 < bar@103 < exit@104,Z5
+4896f15f3c7958aa,tier3_underverified_arch_sm_90,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+4907bd972071ac44,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+49bafa9a867d1bb5,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+4eac8702d6ed0561,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+4f0ab20e32d41110,tier3_underverified_arch_sm_75,FULL_SIGNATURE,store@173 < membar@175 < bar@176 < exit@177,Z5
+4f1d3f7948e1b064,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+4f3415a297e3a0a7,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+52ca8aab5aaea87a,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+54bfe95b6260a214,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+54d689cf4b1e0e1a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+550c18f6a7c9aff2,tier3_indirect_zero_store,FULL_SIGNATURE,store@573 < membar@581 < bar@583 < exit@584,Z6
+558e08d0aad59585,tier2_base_stratified,FULL_SIGNATURE,store@188 < membar@196 < bar@199 < exit@200,Z5
+570e27529e0ef15a,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (29 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+5755042a10175f7b,tier2_base_stratified,FULL_SIGNATURE,store@34 < membar@38 < bar@39 < exit@40,Z5
+58faea7e9506a887,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+5a7cee2932d85f0a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+5b585a2a0276a179,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+5ce43738982327ba,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+5dcbc3c07eb6df07,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+5de38fe647511546,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+5e382d1f7222884c,tier3_underverified_arch_sm_90,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+60d3bd39bf523e8e,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+6266c32c18ffd607,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+62c36e3e511f7664,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+650720579f94a481,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+6653ca1f5d75862c,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (29 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+67da7a670d7f382f,tier3_indirect_zero_store,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+68095e2970648212,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+6897b93836a76420,tier2_base_stratified,FULL_SIGNATURE,"store@163 < membar@167 < bar@168 < every relevant EXIT [169, 174] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z5
+6968cbac2143a2d8,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+6aa6f604e062b554,tier2_base_stratified,FULL_SIGNATURE,"store@164 < membar@168 < bar@169 < every relevant EXIT [170, 175] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z6
+6ad0838114e80604,tier2_base_stratified,FULL_SIGNATURE,store@78 < membar@82 < bar@83 < exit@84,Z6
+6b34a2741479290a,tier2_base_stratified,FULL_SIGNATURE,store@96 < membar@98 < bar@99 < exit@100,Z6
+6ce5234564a3d19b,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+6d339874cf8facfe,tier3_underverified_arch_sm_75,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+6d50912f11af017a,tier2_base_stratified,FULL_SIGNATURE,"store@164 < membar@168 < bar@169 < every relevant EXIT [170, 175] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z6
+6f8185a6b8ae1a9d,tier2_base_stratified,FULL_SIGNATURE,store@207 < membar@209 < bar@210 < exit@211,Z5
+6f860d1211e4380c,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+720b64e50e47456a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+731789e2c352edef,tier3_indirect_zero_store,FULL_SIGNATURE,store@77 < membar@85 < bar@87 < exit@88,Z6
+73acb3063d22c852,tier2_base_stratified,FULL_SIGNATURE,store@168 < membar@170 < bar@171 < exit@172,Z5
+75426524501c41d2,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+7652067eed41ee53,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+77e01f187b00d52c,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+780ae1796921d7a6,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+7b7dda511e3ab414,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+7ba9006d34dfde82,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+7bf1f879a63ea15d,tier2_base_stratified,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+7cb1d68f17322586,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+808fe53c3ef825cb,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+8137394cc90e1427,tier2_base_stratified,FULL_SIGNATURE,store@138 < membar@140 < bar@141 < exit@142,Z6
+81c3f6660db8a1af,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+82cfb593c86e3e66,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+83d10ecba1f988e8,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+84aac3f3d16a2615,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+856d37eafdde5c98,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+874a41f5f5dfa08e,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+874d4db570f83967,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+88632d09aac73801,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+8871a8c7c7a2886e,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+8a165eda84bf5edc,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+8b939838859c6f13,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+8da2e979c116b710,tier2_base_stratified,FULL_SIGNATURE,store@334 < membar@342 < bar@344 < exit@364,Z5
+8ed10b515b816312,tier2_base_stratified,FULL_SIGNATURE,store@227 < membar@229 < bar@230 < exit@231,Z6
+8f036f3f379b6e2f,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+8fc3417ef0ed342d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+9054a1002e001c0f,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+90e38c34c06f9cfe,tier3_multi_exit_ge3,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+927812b7a4036980,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+95bcec931ff7abfd,tier2_base_stratified,FULL_SIGNATURE,"store@163 < membar@167 < bar@168 < every relevant EXIT [169, 174] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z5
+9637be7f12c764b2,tier2_base_stratified,FULL_SIGNATURE,store@227 < membar@229 < bar@230 < exit@231,Z6
+974594829f559c77,tier2_base_stratified,FULL_SIGNATURE,store@212 < membar@214 < bar@215 < exit@216,Z5
+98a6883a0594ac10,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+9ae969f79ef15a42,tier2_base_stratified,FULL_SIGNATURE,store@227 < membar@229 < bar@230 < exit@231,Z5
+9be997a59949e281,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+9bf721be0cf60e04,tier2_base_stratified,FULL_SIGNATURE,store@207 < membar@209 < bar@210 < exit@211,Z6
+9c0c12fee991bd4e,tier2_base_stratified,FULL_SIGNATURE,store@98 < membar@106 < bar@108 < exit@109,Z6
+9c445f85f00fd581,tier2_base_stratified,FULL_SIGNATURE,store@147 < membar@151 < bar@152 < exit@153,Z6
+9d73448f6b7d05e0,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+9dffccafc06b1bdf,tier2_base_stratified,FULL_SIGNATURE,store@139 < membar@141 < bar@142 < exit@143,Z5
+9ee0da7f5b2d5b4a,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+9f44953b668d3d96,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+a1bedd373079a31f,tier3_underverified_arch_sm_90,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+a2aaa2876ff9f725,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+a2fedc6bc8cfc43d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+a3e9d1af823412b7,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+a56380cde19fc830,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+a66d8483afa5d208,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+a6bc5a5f52894730,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+ab9c5548c372ef24,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+abe519c4ce9dd870,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+ae18ab720594ef8d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+af3e00eacbe6adf3,tier2_base_stratified,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,Z5
+af518bab87cdc426,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+b1dfc6e76cd6e63b,tier2_base_stratified,FULL_SIGNATURE,store@78 < membar@86 < bar@88 < exit@89,Z6
+b297d327eb87b64d,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+b3e628790597783e,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+b3ff86a7cd66eda9,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+b4452789b1603abf,tier2_base_stratified,FULL_SIGNATURE,store@90 < membar@94 < bar@95 < exit@96,Z6
+b5630453f8eca45f,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+b6f89b430eabad1f,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+b9290f82dc6f10f8,tier2_base_stratified,FULL_SIGNATURE,store@76 < membar@78 < bar@79 < exit@80,Z5
+b93f89730ed50069,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+ba96f104348cfc30,tier2_base_stratified,FULL_SIGNATURE,store@554 < membar@562 < bar@564 < exit@565,Z5
+baadf456a3b26701,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+baf09c1944e7246a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+baf5847933c1ad5a,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+bb027f7dbd380194,tier2_base_stratified,FULL_SIGNATURE,store@127 < membar@131 < bar@132 < exit@133,Z6
+bb18ea158bccf4eb,tier1_flag_recheck,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+bbdc03575624cd62,tier3_underverified_arch_sm_90,FULL_SIGNATURE,store@139 < membar@141 < bar@142 < exit@143,Z5
+bc64260898c1bc62,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+bcf25d4e5ec645bb,tier2_base_stratified,FULL_SIGNATURE,store@189 < membar@191 < bar@192 < exit@193,Z6
+bd9774e40ede7f0c,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+c0224421f9894156,tier2_base_stratified,FULL_SIGNATURE,store@126 < membar@130 < bar@131 < exit@132,Z5
+c13539275acc0d3b,tier2_base_stratified,FULL_SIGNATURE,store@333 < membar@341 < bar@343 < exit@363,Z6
+c1cd980ad270a733,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z3
+c2a8826ef98e1469,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+c367c9d480f6e3e9,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+c3ce403423aa3aa9,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+c3d8b80184f275be,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+c3ee8ef85b288017,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+c4df620c7a2aaa10,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+c6962b5346d5873f,tier2_base_stratified,FULL_SIGNATURE,store@168 < membar@170 < bar@171 < exit@172,Z5
+c72245fc634183c9,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+c852831bec277122,tier2_base_stratified,FULL_SIGNATURE,store@353 < membar@361 < bar@363 < exit@383,Z6
+c8f02cc62104f298,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+c90a4ea0d755440f,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+caf00032fd9ae1fd,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+cbbc37b3cb5fc7a4,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+cbe3f2a06e8e0f4c,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (5 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+cc949049379ae270,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+ce4f2032dba9d555,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (9 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+ce89e98ab53bdfb4,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+cf06d70d1c5d4204,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+cf129f7f9f163d2d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+d128fa43d26592e4,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+d1f6c353149c6419,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+d22204a0e4b057e8,tier3_indirect_zero_store,FULL_SIGNATURE,store@333 < membar@341 < bar@343 < exit@363,Z6
+d281864306d858ef,tier2_base_stratified,FULL_SIGNATURE,store@168 < membar@170 < bar@171 < exit@172,Z5
+d6185f348582bc71,tier2_base_stratified,FULL_SIGNATURE,store@139 < membar@141 < bar@142 < exit@143,Z5
+d6e41235012fdeaf,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+d6f3c6bf82466165,tier3_indirect_zero_store,FULL_SIGNATURE,store@79 < membar@87 < bar@89 < exit@90,Z5
+d712e88fe9706bbf,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found (2 nonzero/unclassified shared store(s) present — see parser_warnings),Z0
+d9a360b7fb71b1ad,tier2_base_stratified,FULL_SIGNATURE,store@86 < membar@90 < bar@91 < exit@92,Z6
+d9a7acf951d820d8,tier2_base_stratified,FULL_SIGNATURE,store@189 < membar@191 < bar@192 < exit@193,Z6
+dacea5d69df4400c,tier3_underverified_arch_sm_90,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+dad686d786cd6199,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+db0e11f080bead9a,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+db3c49edf6e25326,tier2_base_stratified,FULL_SIGNATURE,"store@122 < membar@126 < bar@127 < every relevant EXIT [130, 135] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected)",Z5
+dbc3d523ba4d2ac2,tier2_base_stratified,FULL_SIGNATURE,store@141 < membar@143 < bar@144 < exit@145,Z6
+def7d8ced33055d2,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+dfb0c82048eb05cd,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+e04f94bf3e117c82,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+e09b2f6ddfba90bb,tier2_base_stratified,STORE_ONLY,"5 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+e20101856ab3a4d2,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+e2266714b5d9e3de,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+e295057f42521dcc,tier2_base_stratified,FULL_SIGNATURE,store@97 < membar@101 < bar@102 < exit@103,Z6
+e32cd3b79325c702,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+e5996000cf8b98b8,tier2_base_stratified,FULL_SIGNATURE,store@83 < membar@87 < bar@88 < exit@89,Z5
+e7a993866efe3610,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+e8ce813e5a101229,tier2_base_stratified,FULL_SIGNATURE,store@79 < membar@87 < bar@89 < exit@90,Z5
+e9092cb0b165d826,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+e91edb61e13c2728,tier2_base_stratified,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+ea751cecb9b071b3,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+ebf457ed1cf79472,tier3_multi_exit_ge3,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+eddb0b3b6c0c5675,tier2_base_stratified,FULL_SIGNATURE,store@138 < membar@140 < bar@141 < exit@142,Z6
+ef012af88b7c3ff9,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+ef034ae9e6fdd8d7,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z0
+ef64c1e6ca2c9250,tier2_base_stratified,FULL_SIGNATURE,store@219 < membar@221 < bar@222 < exit@223,Z6
+f0073ca2f6ec8274,tier3_indirect_zero_store,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+f1d48e7c00bdbc9b,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+f2abf890fefaae12,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+f2af36db9de8637d,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+f5be11d3fe89e842,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+f64075c0f882121b,tier2_base_stratified,FULL_SIGNATURE,store@97 < membar@101 < bar@102 < exit@103,Z5
+f64a3a36de4d57ba,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z4
+f6d81be8a6d09238,tier3_multi_exit_ge3,STORE_ONLY,"29 zero-store(s) found; no MEMBAR.SC.CTA, no BAR.SYNC",Z2
+f7a1be9bcaddcd1f,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1
+f7fb4187c57ade4a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z1
+fa4a9f6d87e33ac5,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+fbf6dbdc0ccb5ce3,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z2
+fe3d6cb737ad151a,tier2_base_stratified,PARTIAL_SIGNATURE,"zero-store(s) + BAR.SYNC present, MEMBAR.SC.CTA missing",Z3
+ff4b7afb685227cf,tier2_base_stratified,ABSENT,no zero-valued shared store (STS…RZ) found,Z1

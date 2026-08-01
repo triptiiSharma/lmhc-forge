@@ -60,6 +60,32 @@ class TestSyntheticBoundaryConditions(unittest.TestCase):
         ])
         self.assertEqual(r.category, "PARTIAL_SIGNATURE")
 
+    def test_full_signature_holds_across_three_exits(self):
+        """Phase 4 finding: in the real 2,018-artifact core corpus, every
+        multi-EXIT FULL_SIGNATURE case that occurred had exit_count==2 —
+        the >=3-exit branch of classify_kernel's ordering check was never
+        exercised by real compiled data. This synthetic case closes that
+        gap: three predicated EXITs, all after the signature."""
+        r = self._classify("_Z4testv", [
+            "STS [R0], RZ ;", "MEMBAR.SC.CTA ;", "BAR.SYNC ;",
+            "@P0 EXIT ;", "@P1 EXIT ;", "EXIT ;",
+        ])
+        self.assertEqual(r.category, "FULL_SIGNATURE")
+        self.assertTrue(r.multi_exit_scope_assumed)
+
+    def test_undecidable_when_signature_precedes_only_some_relevant_exits(self):
+        """A relevant exit (after the last zero-store) sits BEFORE the
+        barrier, while another relevant exit sits after it -> a textual
+        checker cannot resolve which thread path is actually taken, so
+        this must be UNDECIDABLE, not guessed either way (task §13)."""
+        r = self._classify("_Z4testv", [
+            "STS [R0], RZ ;", "MEMBAR.SC.CTA ;",
+            "@P0 EXIT ;",      # relevant (after store), but BEFORE the barrier below
+            "BAR.SYNC ;",
+            "@P1 EXIT ;",      # relevant and after the barrier
+        ])
+        self.assertEqual(r.category, "UNDECIDABLE")
+
     def test_undecidable_no_exit_never_coerced_to_pass(self):
         """Task §22 requirement 8: a parser failure (no EXIT found -> scope
         cannot be bounded) must never be silently reported as a pass."""
