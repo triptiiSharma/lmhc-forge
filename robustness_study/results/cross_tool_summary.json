@@ -1,0 +1,43 @@
+{
+  "total_artifacts": 2016,
+  "category_agreement_count": 2016,
+  "category_agreement_pct": 100.0,
+  "disagreement_count": 0,
+  "unsupported_count": 0,
+  "nvdisasm_undecidable_count": 0,
+  "cuobjdump_undecidable_count": 0,
+  "feature_agreement": {
+    "zero_shared_store_direct_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "zero_shared_store_indirect_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "zero_shared_store_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "membar_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "membar_cta_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "bar_sync_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "exit_count": {
+      "agree": 2016,
+      "total": 2016
+    },
+    "branch_count": {
+      "agree": 2016,
+      "total": 2016
+    }
+  }
+}

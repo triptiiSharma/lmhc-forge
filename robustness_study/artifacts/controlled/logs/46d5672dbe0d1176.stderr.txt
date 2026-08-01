@@ -1,0 +1,6 @@
+/mnt/c/Tripti Sharma/lmhc-forge/robustness_study/kernels/controlled/n8.cu(11): warning #550-D: variable "junk" was set but never used
+      __attribute__((shared)) uint32_t junk[32];
+                                       ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+

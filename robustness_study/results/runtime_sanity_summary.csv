@@ -1,0 +1,19 @@
+construct,context,compile_status,run_return_code,n_repeats,all_launches_ok,all_syncs_ok,all_computations_correct,nonzero_words_per_repeat,consistent_across_repeats
+Z0,K2,COMPILE_OK,0,5,True,True,True,"[1024, 1024, 1024, 1024, 1024]",True
+Z0,K3,COMPILE_OK,0,5,True,True,True,"[256, 256, 256, 256, 256]",True
+Z0,K4,COMPILE_OK,0,5,True,True,True,"[219, 219, 219, 219, 219]",True
+Z1,K2,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z1,K3,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z1,K4,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z2,K2,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z2,K3,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z2,K4,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z4,K2,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z4,K3,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z4,K4,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z5,K2,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z5,K3,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z5,K4,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z6,K2,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z6,K3,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True
+Z6,K4,COMPILE_OK,0,5,True,True,True,"[0, 0, 0, 0, 0]",True

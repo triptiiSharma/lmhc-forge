@@ -1,0 +1,9 @@
+case_id,artifact_id,intended_category,cuobjdump_verdict,cuobjdump_detail,toolkit,ptxas_optimization,target_arch
+N6,afce917b806cb3eb,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@166 < membar@174 < bar@176 < exit@177,cuda-12.8,0,sm_86
+N6,86d150b01fa842cc,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@166 < membar@174 < bar@176 < exit@177,cuda-12.8,0,sm_89
+N6,808442adc9be4379,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@214 < membar@216 < bar@217 < every relevant EXIT [218] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected),cuda-12.8,3,sm_86
+N6,8c74d78c29ab9834,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@214 < membar@216 < bar@217 < every relevant EXIT [218] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected),cuda-12.8,3,sm_89
+N6,1b5d8ba1001be7aa,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@166 < membar@174 < bar@176 < exit@177,cuda-13.3,0,sm_86
+N6,d27f1e068a2e800e,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@166 < membar@174 < bar@176 < exit@177,cuda-13.3,0,sm_89
+N6,08b3105b4dfc7f49,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@214 < membar@216 < bar@217 < every relevant EXIT [218] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected),cuda-13.3,3,sm_86
+N6,4ce8e5c841da242d,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,store@214 < membar@216 < bar@217 < every relevant EXIT [218] (multi-EXIT kernel — see PLAN.md §9 for why first-EXIT-only scoping was rejected),cuda-13.3,3,sm_89
