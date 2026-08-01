@@ -1,0 +1,37 @@
+{
+  "experiment": "P-spill -- CUDA local-memory (register/shared spill) residue recovery",
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (sm_89)",
+  "framing": "Residue is fully observable when a later kernel reuses the same local-memory frame -- reuse is addressed by identical launch geometry (grid/block/thread index), not SM residency, and is forced in this experiment via identical <<<1,32>>> launches with no intervening allocation of larger local-memory footprint. This is in-process cross-kernel local(global-backed)-memory persistence, NOT cross-tenant LeftoverLocals on NVIDIA.",
+  "mechanism_note": "Unlike P-reuse (on-chip shared memory, SM-residency-gated), P-spill's persistence is launch-geometry-addressed: CUDA local memory is a per-context region sized to the largest per-thread footprint requested so far and is not observed to be re-zeroed between kernel launches in the same context (A1). No same-SM gating is applied or needed for this path.",
+  "local_words_per_thread": 256,
+  "block_dim": 32,
+  "total_words": 8192,
+  "pattern_sentinel": "0xCAFEBABE",
+  "trials_per_phase": 200,
+  "control": {
+    "label": "listener only, writer never launched",
+    "trials": 200,
+    "nonzero_words": 0,
+    "total_words": 1638400,
+    "exposure_index": 0.000000
+  },
+  "phase_A": {
+    "label": "writer WITHOUT LMHC scrub",
+    "trials": 200,
+    "nonzero_words": 0,
+    "total_words": 1638400,
+    "exposure_index": 0.000000
+  },
+  "phase_B": {
+    "label": "writer WITH LMHC hardened scrub",
+    "trials": 200,
+    "nonzero_words": 0,
+    "total_words": 1638400,
+    "exposure_index": 0.000000
+  },
+  "exposure_index_control": 0.000000,
+  "exposure_index_before": 0.000000,
+  "exposure_index_after":  0.000000,
+  "sass_verification_required": "cuobjdump -sass must confirm kernelA_pspill_unscrubbed lowers local_arr accesses to STL/LDL (or generic .local-space) instructions, not registers -- see RESULTS.md P-spill section for the disassembly excerpt actually used to confirm this.",
+  "result": "NO RESIDUE OBSERVED (bounding result, not a defect): control, unscrubbed, and scrubbed phases all read EI=0.0. SASS confirms genuine STL/LDL local-memory stores and loads (256-iteration loops, no dead-code elimination -- see sass_verification note). A same-kernel-twice diagnostic (src/pspill_diag.cu) and an address-stability diagnostic (src/pspill_diag2.cu) confirm the listener reads the IDENTICAL virtual address the writer wrote, yet observes zero, not the pattern. This indicates CUDA local (register/shared-spill) memory backing is zeroed between kernel launches on this hardware/driver/toolchain (RTX 4050, driver 573.22, CUDA 12.8 runtime, WSL2/WDDM passthrough) -- in contrast to on-chip shared memory, which showed 100% residue (Phase 0 / Module 6) under the IDENTICAL software stack. This bounds Platform Assumption A1 for the P-spill path specifically: A1 does not appear to hold for CUDA local memory on this configuration, even though it holds for on-chip shared memory. Root cause (WSL2/WDDM page-zeroing vs. native-Linux driver behavior vs. architecture-level scrubbing) is not established by this measurement and needs a native-Linux (non-WSL2) run to disambiguate."
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LMHC-Forge — Multi-GPU Replication Results</title>
+<style>
+  body {font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;
+         padding:0 16px;color:#222}
+  h1 {font-size:1.2rem}
+  table {border-collapse:collapse;width:100%;font-size:0.88rem}
+  th {background:#37474f;color:#fff;padding:7px 10px;text-align:left}
+  td {padding:6px 10px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+  .invalid-row td {background:#fff8f8}
+  .valid-y {color:#2e7d32;font-weight:bold}
+  .valid-n {color:#b71c1c;font-weight:bold}
+  .invalid-note {background:#fff3e0;border-left:4px solid #fb8c00;
+                  padding:8px 14px;color:#e65100;margin:12px 0;border-radius:3px}
+  .caption {font-size:0.8rem;color:#555;font-style:italic;
+             border-top:1px solid #eee;padding-top:10px;margin-top:24px;line-height:1.5}
+</style>
+</head>
+<body>
+<h1>LMHC-Forge &mdash; Multi-GPU Replication Results</h1>
+
+<table>
+  <thead><tr><th>GPU</th><th>Architecture</th><th>Driver</th><th>CUDA Runtime</th><th>Same-SM trials</th><th>EI (no scrub)</th><th>Control EI</th><th>EI (LMHC scrub)</th><th>Valid</th></tr></thead>
+  <tbody>
+<tr><td>NVIDIA GeForce RTX 3050 Laptop GPU</td><td>Ampere</td><td>610.43.02</td><td>12.4</td><td>200</td><td>1.0000</td><td>0.0000</td><td>0.0000</td><td class="valid-y">Y</td></tr>
+<tr><td>NVIDIA GeForce RTX 3060 Ti</td><td>Ampere</td><td>cuda_api_13.2</td><td>12.8</td><td>200</td><td>0.9950</td><td>0.0000</td><td>0.0000</td><td class="valid-y">Y</td></tr>
+<tr><td>NVIDIA GeForce RTX 4050 Laptop GPU</td><td>Ada Lovelace</td><td>cuda_api_12.8</td><td>12.8</td><td>200</td><td>1.0000</td><td>0.0000</td><td>0.0000</td><td class="valid-y">Y</td></tr>
+  </tbody>
+</table>
+<p class="caption">Co-residency is forced on every device (single-block __launch_bounds__(32,1) + %smid verification). These are controlled-placement results consistent with the adversarial threat model &mdash; not natural-scheduling frequencies, and not a claim about production prevalence or about non-tested hardware. See ../docs/INTERPRETATION.md for pre-committed outcome readings. Reports are generated from validated JSONs and depict controlled-placement measurements only.</p>
+</body>
+</html>

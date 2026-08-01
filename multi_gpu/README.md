@@ -24,7 +24,7 @@ send back the one JSON file it produces.
 > frequencies, and not a claim about production prevalence or about non-tested
 > hardware.
 
-Read `INTERPRETATION.md` for the pre-committed reading of every possible outcome
+Read [`../docs/INTERPRETATION.md`](../docs/INTERPRETATION.md) for the pre-committed reading of every possible outcome
 before any results are collected.
 
 ---
@@ -259,7 +259,7 @@ python3 report.py results/MyGPU_sm89_driver.json
 | `run.sh` | One-shot build + run script for collaborators |
 | `aggregate.py` | Reads `results/*.json`, emits Markdown / TSV / HTML comparison table |
 | `report.py` | Per-device HTML report with EI bar chart; run against any single result JSON |
-| `INTERPRETATION.md` | Pre-committed outcome readings (written before results) |
 | `README.md` | This file |
+| [`../docs/INTERPRETATION.md`](../docs/INTERPRETATION.md) | Pre-committed outcome readings (written before results) |
 | `results/` | Per-device JSON files (place outputs here; also written by `run.sh`) |
 | `runs/` | Timestamped run archives: JSON + `stderr.log` + `run_metadata.txt` per run |

@@ -1,6 +1,6 @@
 {
   "schema_version": "multi_gpu_repro_v1",
-  "timestamp": "2026-06-29T12:49:09Z",
+  "timestamp": "2026-07-16T14:54:42Z",
   "valid": true,
   "valid_reason": "control all-zero (self-contamination ruled out)",
 

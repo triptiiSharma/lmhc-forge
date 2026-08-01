@@ -41,7 +41,7 @@ FRAMING_NOTE = (
     "controlled-placement results consistent with the adversarial threat "
     "model — not natural-scheduling frequencies, and not a claim about "
     "production prevalence or about non-tested hardware. See "
-    "INTERPRETATION.md for pre-committed outcome readings."
+    "../docs/INTERPRETATION.md for pre-committed outcome readings."
 )
 
 
@@ -125,7 +125,7 @@ _HTML_CAPTION = (
     "These are controlled-placement results consistent with the adversarial "
     "threat model &mdash; not natural-scheduling frequencies, and not a claim "
     "about production prevalence or about non-tested hardware. "
-    "See INTERPRETATION.md for pre-committed outcome readings. "
+    "See ../docs/INTERPRETATION.md for pre-committed outcome readings. "
     "Reports are generated from validated JSONs and depict "
     "controlled-placement measurements only."
 )
@@ -136,7 +136,7 @@ def html_table(results: list) -> str:
 
     Only a table is produced. No trend charts, leakage-rate axes, or
     cross-device lines are included — a table is the appropriate form
-    for this data (see INTERPRETATION.md).
+    for this data (see ../docs/INTERPRETATION.md).
     """
     th = "".join(f"<th>{c}</th>" for c in COLUMNS)
     rows_html = ""
@@ -258,7 +258,7 @@ def main():
         else:
             md += f"- **{row['gpu']}** ({row['file']}): trials={row['trials']}, buffer={row['buffer_words']} words\n"
 
-    out = open(args.output, "w") if args.output else sys.stdout
+    out = open(args.output, "w", encoding="utf-8") if args.output else sys.stdout
     out.write(md + "\n")
     if args.output:
         out.close()
@@ -266,7 +266,7 @@ def main():
 
     if args.tsv:
         tsv = tsv_table(rows)
-        with open(args.tsv, "w") as f:
+        with open(args.tsv, "w", encoding="utf-8") as f:
             f.write(tsv + "\n")
         print(f"TSV table written to {args.tsv}")
 

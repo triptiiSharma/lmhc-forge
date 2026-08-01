@@ -8,7 +8,7 @@
 // SCOPE GUARD: Controlled-placement replication only. Natural-scheduling mode
 // is explicitly out of scope for this artifact.
 //
-// MANDATORY FRAMING (SPEC.md §Module 6, INTERPRETATION.md):
+// MANDATORY FRAMING (docs/SPEC.md §Module 6, docs/INTERPRETATION.md):
 //   "Residue is fully observable when the subsequent kernel is co-resident on
 //    the same SM — co-residency is forced in this experiment to demonstrate the
 //    window. This is in-process cross-kernel shared-memory persistence, NOT

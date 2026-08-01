@@ -1,0 +1,8 @@
+timestamp:       2026-07-16_20-23-51
+compile_command: "/usr/local/cuda-12.8/bin/nvcc" -arch=sm_89 -O2 -ccbin "/usr/bin/gcc-14" -o "/mnt/c/Tripti Sharma/lmhc-forge/multi_gpu/multi_gpu_repro" "/mnt/c/Tripti Sharma/lmhc-forge/multi_gpu/multi_gpu_repro.cu"
+run_command:     "/mnt/c/Tripti Sharma/lmhc-forge/multi_gpu/multi_gpu_repro" -n 200 -o "/mnt/c/Tripti Sharma/lmhc-forge/multi_gpu/runs/2026-07-16_20-23-51_NVIDIA_GeForce_RTX_4050_Laptop_GPU/NVIDIA_GeForce_RTX_4050_Laptop_GPU_sm_89_cuda_api_12.8.json"
+arch:            sm_89 (auto-detected)
+nvcc:            /usr/local/cuda-12.8/bin/nvcc
+nvcc_version:    Cuda compilation tools, release 12.8, V12.8.93
+ccbin:           /usr/bin/gcc-14
+ccbin_version:   gcc-14 (Debian 14.3.0-14) 14.3.0

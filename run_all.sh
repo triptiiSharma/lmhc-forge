@@ -87,14 +87,15 @@ $NVCC $NVCC_FLAGS -o "$ROOT/phase0_control" "$SRC/phase0_control.cu" 2>/dev/null
 # ── Module 1 — Discovery Engine ───────────────────────────────────────────────
 log "=== Module 1: Discovery Engine ==="
 python3 "$SRC/discover.py" "$SRC/test_kernels.cu" \
-    --output-conservative "$RESULTS/discovery_conservative.json" \
-    --output-taint        "$RESULTS/discovery_taint.json"
+    --output "$RESULTS/discovery_conservative.json"
+python3 "$SRC/discover.py" "$SRC/test_kernels.cu" --taint \
+    --output "$RESULTS/discovery_taint.json"
 log "  discovery_conservative.json / discovery_taint.json written"
 
 # ── Module 2 — LMHC Rewriter ─────────────────────────────────────────────────
 log "=== Module 2: LMHC Rewriter ==="
 python3 "$SRC/lmhc_rewriter.py" "$SRC/test_kernels.cu" \
-    --taint "$RESULTS/discovery_taint.json" \
+    --discovery "$RESULTS/discovery_taint.json" --taint-only \
     --output "$SRC/test_kernels_lmhc.cu"
 log "  test_kernels_lmhc.cu written"
 

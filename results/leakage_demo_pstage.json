@@ -1,0 +1,37 @@
+{
+  "experiment": "P-stage -- explicit shared->global staging-buffer residue recovery via cudaMalloc/cudaFree reuse",
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (sm_89)",
+  "framing": "Residue is fully observable when the scavenger's cudaMalloc call reuses the exact physical/virtual block the writer just cudaFree'd -- reuse is checked and gated explicitly per trial (same_alloc), analogous to the same-SM gate in leakage_demo.cu. This is in-process, single-context allocator reuse, NOT cross-tenant LeftoverLocals on NVIDIA and NOT a claim that the CUDA allocator is guaranteed to reuse freed blocks.",
+  "tile_words": 4096,
+  "block_dim": 32,
+  "pattern_sentinel": "0xCAFEBABE",
+  "trials_per_phase": 200,
+  "control": {
+    "label": "scavenger only, writer never launched",
+    "same_alloc_trials": 200,
+    "diff_alloc_trials": 0,
+    "nonzero_words": 0,
+    "total_words": 819200,
+    "exposure_index": 0.000000
+  },
+  "phase_A": {
+    "label": "writer WITHOUT LMHC scrub",
+    "same_alloc_trials": 200,
+    "diff_alloc_trials": 0,
+    "nonzero_words": 819200,
+    "total_words": 819200,
+    "exposure_index": 1.000000
+  },
+  "phase_B": {
+    "label": "writer WITH LMHC hardened scrub",
+    "same_alloc_trials": 200,
+    "diff_alloc_trials": 0,
+    "nonzero_words": 0,
+    "total_words": 819200,
+    "exposure_index": 0.000000
+  },
+  "exposure_index_control": 0.000000,
+  "exposure_index_before": 1.000000,
+  "exposure_index_after":  0.000000,
+  "result": "LMHC scrub reduces P-stage Exposure Index from ~1.0 to 0.0 on allocator-reuse trials -- global-backed staging-buffer residue window closed; control confirms no self-contamination."
+}

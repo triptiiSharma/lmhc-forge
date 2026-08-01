@@ -14,7 +14,7 @@ LMHC scrub pattern (per Theorem 1 / §4.4 of the paper):
     __threadfence_block();
     __syncthreads();
 
-SCOPE LIMITATION (see SPEC.md LIMITATIONS section):
+SCOPE LIMITATION (see docs/SPEC.md LIMITATIONS section):
     This rewriter handles kernels with a single exit point only
     (no early returns, no goto). Kernels with >0 explicit return statements
     before the closing brace are REJECTED with an error message.

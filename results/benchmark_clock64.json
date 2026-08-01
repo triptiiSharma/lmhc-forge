@@ -1,0 +1,25 @@
+{
+  "experiment": "On-device clock64() scrub-region bracketing (RP Sec VI.D)",
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (sm_89)",
+  "gpu_clock_rate_khz": 2130000,
+  "caveat": "clock64() counts SM clock cycles exactly (jitter-free); ns conversion uses cudaDeviceProp.clockRate queried once at idle before the runs, so absolute ns figures inherit whatever imprecision GPU Boost/dynamic clocking introduces relative to that fixed reference. Cycle counts themselves are exact.",
+  "n_warmup": 50,
+  "n_reps": 500,
+  "method": "single-block kernel; __syncthreads() -> t0=clock64() -> [scrub loop + __threadfence_block() + __syncthreads()] -> t1=clock64(); thread 0 only; cycles = t1-t0; median/stddev over reps (post-warmup)",
+  "kernels": [
+    {"class": "reduction",  "scrub_words": 4096, "cycles_median": 446.00, "cycles_stddev": 0.00, "ns_median": 209.3897, "ns_stddev": 0.0000},
+    {"class": "gemm",       "scrub_words": 256, "cycles_median": 133.00, "cycles_stddev": 0.82, "ns_median": 62.4413, "ns_stddev": 0.3864},
+    {"class": "attention",  "scrub_words": 2048, "cycles_median": 350.00, "cycles_stddev": 0.13, "ns_median": 164.3192, "ns_stddev": 0.0593}
+  ],
+  "full_sm_amplification": {
+    "description": "RP Sec VI.D item (b): scrubs a near-max shared-memory footprint (24000 words, 93.75 KB of ~100 KB/SM ceiling) with a full-size 1024-thread block, dividing total scrub time by word count for a bandwidth-representative figure independent of any one kernel's thread geometry.",
+    "words": 24000,
+    "threads": 1024,
+    "cycles_median": 1786.00,
+    "cycles_stddev": 0.00,
+    "total_ns_median": 838.4977,
+    "ns_per_word": 0.034937,
+    "ns_per_word_95ci": 0.000000
+  },
+  "result": "Fills RP Table IV's clock64() column and Sec VI.D's [[MEASURE: cycles/exit per class]] / [[MEASURE: ns/exit]] placeholders with genuinely resolved, jitter-free on-device measurements, and the amplification method's [[MEASURE: ns per word, 95% CI]] placeholder -- distinct from and more precise than benchmark.json's host-side CUDA-event upper bounds, which the scrub cost was too small to resolve against."
+}

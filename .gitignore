@@ -3,12 +3,22 @@
 *.obj
 *.pdb
 
+# WSL/Linux-compiled ELF binaries left in the tree by multi_gpu/run.sh or
+# manual nvcc invocations (no extension to glob on; named explicitly)
+multi_gpu/multi_gpu_repro
+
 # Scratch files
 prompt.txt
 cuda_probe.cu
 
 # Claude internal session data
 .claude/
+
+# Agent working notes: original Claude-Code-addressed SPEC.md and any other
+# session/continuity documents not meant for the published repo. See
+# docs/SPEC.md for the public, third-person version of this content.
+dev-notes/
+placeholders.md
 
 # macOS / editor
 .DS_Store

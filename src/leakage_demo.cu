@@ -1,7 +1,7 @@
 // leakage_demo.cu — Module 6: LMHC Leakage Demonstration
 // Writer/Listener experiment showing Exposure Index before/after LMHC scrub.
 //
-// MANDATORY FRAMING (SPEC.md §Module 6):
+// MANDATORY FRAMING (docs/SPEC.md §Module 6):
 //   "Residue is fully observable when the subsequent kernel is co-resident on
 //    the same SM — co-residency is forced in this experiment to demonstrate the
 //    window. This is in-process cross-kernel shared-memory persistence, NOT

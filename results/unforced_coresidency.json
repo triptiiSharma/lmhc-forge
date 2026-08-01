@@ -1,0 +1,28 @@
+{
+  "experiment": "Unforced co-residency -- natural scheduler placement, same process/context, no __launch_bounds__ pinning",
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (sm_89), 20 SMs",
+  "scope_note": "SAME OS process and CUDA context as leakage_demo.cu/Phase 0, but placement is NOT forced (no __launch_bounds__, multi-block grid). Does NOT test cross-process or cross-context residue (would require CUDA MPS or reliance on default per-context driver isolation -- not attempted here, see RESULTS.md). This result must never be averaged with or substituted for the forced-co-residency Phase 0/Module 6 results.",
+  "words_per_block": 16000,
+  "threads_per_block": 32,
+  "writer_nblocks": 8,
+  "listener_nblocks": 20,
+  "nrepeats": 50,
+  "pattern_sentinel": "0xCAFEBABE",
+  "phase_A_unscrubbed": {
+    "listener_blocks_total": 1000,
+    "listener_blocks_coresident_with_writer": 400,
+    "natural_coresidency_rate": 0.400000,
+    "exposure_index_coresident_blocks": 1.000000,
+    "coresident_nonzero_words": 6400000,
+    "coresident_total_words": 6400000
+  },
+  "phase_B_lmhc_scrubbed": {
+    "listener_blocks_total": 1000,
+    "listener_blocks_coresident_with_writer": 400,
+    "natural_coresidency_rate": 0.400000,
+    "exposure_index_coresident_blocks": 0.000000,
+    "coresident_nonzero_words": 0,
+    "coresident_total_words": 6400000
+  },
+  "result": "Natural (unpinned, multi-block) co-residency rate = 40.0000% of listener blocks (both phases; placement is deterministic given fixed grid geometry, not scrub-dependent). Of co-resident blocks: EI = 1.000000 WITHOUT scrub, EI = 0.000000 WITH LMHC hardened scrub. This is a device- and occupancy-configuration-specific measurement (WRITER_NBLOCKS=8, LISTENER_NBLOCKS=20, 20 SMs), not a claim about production scheduling frequency on any other hardware, grid size, or shared-memory footprint."
+}

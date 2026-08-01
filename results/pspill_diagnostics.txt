@@ -1,0 +1,10 @@
+launch1 addr=0x75b5c7fff9c0 val=0xcafebabe
+launch2 addr=0x75b5c7fff9c0 val=0x00000000
+same_address=YES  residue_present=NO
+launch1 addr=0x75eb7bfff9c0 val=0xcafebabe
+launch2 addr=0x75eb7bfff9c0 val=0x00000000
+same_address=YES  residue_present=NO
+launch1 addr=0x7974dffff9c0 val=0xcafebabe
+launch2 addr=0x7974dffff9c0 val=0x00000000
+same_address=YES  residue_present=NO
+same-kernel-twice diagnostic: trials=50 nz=0/409600 EI=0.000000

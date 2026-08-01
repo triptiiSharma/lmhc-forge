@@ -1,0 +1,28 @@
+{
+  "experiment": "Sustained-load power draw sampling (RP Sec VI.D 'Energy and thermal cost')",
+  "method": "nvidia-smi --query-gpu=power.draw --format=csv,noheader -lms 100, sampled in parallel with a sustained CUDA launch loop (~4s) for each of 3 modes: idle (no GPU work), empty (repeated fill-only kernel launches, no scrub), scrub (same fill + full LMHC hardened scrub of a ~93.75KB shared-memory footprint per launch, matching benchmark_clock64.cu's amplification kernel).",
+  "caveat": "This isolates the power delta of SUSTAINED, BACK-TO-BACK scrub-kernel launches (thousands/sec) from empty-kernel launches -- NOT the per-exit energy of a single scrub in an otherwise-idle pipeline. nvidia-smi power.draw reflects whole-board power (not per-kernel), sampled at ~100ms/10Hz -- far coarser than the ~200ns-800ns scrub duration itself. A non-significant or small delta here does not by itself establish per-exit energy is negligible; it is the coarsest instrument available without CUPTI power counters (not installed -- see results/verifier_perf.json and benchmark_clock64.json for the equivalent CUPTI/Nsight Compute gap noted there).",
+  "idle": {
+    "n_samples": 28,
+    "mean_w": 14.239,
+    "stdev_w": 0.124,
+    "min_w": 13.73,
+    "max_w": 14.32
+  },
+  "empty_fill_only": {
+    "n_samples": 48,
+    "mean_w": 17.368,
+    "stdev_w": 1.759,
+    "min_w": 14.31,
+    "max_w": 19.12
+  },
+  "scrub_fill_and_scrub": {
+    "n_samples": 48,
+    "mean_w": 21.865,
+    "stdev_w": 2.754,
+    "min_w": 16.9,
+    "max_w": 24.06
+  },
+  "delta_scrub_minus_empty_w": 4.497,
+  "delta_empty_minus_idle_w": 3.129
+}

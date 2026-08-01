@@ -1,0 +1,62 @@
+{
+  "schema_version": "multi_gpu_repro_v1",
+  "timestamp": "2026-07-08T13:53:49Z",
+  "valid": true,
+  "valid_reason": "control all-zero (self-contamination ruled out)",
+
+  "environment": {
+    "gpu_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "compute_capability": "sm_86",
+    "architecture_name": "Ampere",
+    "driver_version": "610.43.02",
+    "cuda_runtime_version": "12.4",
+    "cuda_driver_api_version": "13.3",
+    "nvcc_version_compiled_with": "12.4.131",
+    "os": "Linux 6.18.33.2-microsoft-standard-WSL2 x86_64",
+    "wsl2": true,
+    "gpu_sm_count": 16,
+    "shared_mem_per_sm_bytes": 102400
+  },
+
+  "config": {
+    "buffer_words": 4096,
+    "buffer_bytes": 16384,
+    "buffer_geometry": "fixed compile-time constant (NWORDS=4096); identical to src/leakage_demo.cu baseline",
+    "pattern_sentinel": "0xCAFEBABE",
+    "block_dim": 32,
+    "trials_per_phase": 200,
+    "launch_bounds": "__launch_bounds__(32, 1)",
+    "co_residency_method": "single-block, same-SM forced via __launch_bounds__(32,1); %smid verified per trial"
+  },
+
+  "smid_note": "%smid is a documented PTX special register (PTX ISA §9.4); reading it slightly perturbs scheduling",
+
+  "residue_run": {
+    "description": "writer without scrub then listener; measures raw cross-launch EI",
+    "same_sm_trials": 200,
+    "nonzero_word_count_same_sm": 819200,
+    "total_word_count_same_sm": 819200,
+    "exposure_index": 1.000000
+  },
+
+  "control_run": {
+    "description": "listener only, writer never launched; validity gate run FIRST before any writer (must be 0.0)",
+    "trials": 200,
+    "nonzero_word_count": 0,
+    "total_word_count": 819200,
+    "exposure_index": 0.000000,
+    "control_clean": true
+  },
+
+  "lmhc_scrub_run": {
+    "description": "writer with LMHC hardened scrub (volatile + __threadfence_block() + __syncthreads()) then listener",
+    "same_sm_trials": 200,
+    "nonzero_word_count_same_sm": 0,
+    "total_word_count_same_sm": 819200,
+    "exposure_index": 0.000000
+  },
+
+  "framing": "Residue is fully observable when the subsequent kernel is co-resident on the same SM -- co-residency is forced in this experiment to demonstrate the window. This is in-process cross-kernel shared-memory persistence, NOT cross-tenant LeftoverLocals on NVIDIA. Co-residency is forced on every device, so these are controlled-placement results consistent with our adversarial threat model -- not natural-scheduling frequencies, and not a claim about production prevalence or about non-tested hardware.",
+
+  "result_summary": "VALID: control clean; LMHC scrub drives EI from 1.0 to 0.0 on this device."
+}

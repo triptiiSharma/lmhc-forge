@@ -1,0 +1,65 @@
+{
+  "experiment": "Independent-verifier cost (RP Sec VI.F / Table VI)",
+  "existing_corpus": {
+    "binary": "test_kernels (Module 4/5 corpus)",
+    "cubin_size_bytes": 10656,
+    "stale_on_disk_witness": {
+      "note": "results/witness.json predates the T5 CHECK-1 fix (no source_file_hash) -- FAIL is expected and correct, not a bug. See RESULTS.md Module 5 T5/T6.",
+      "verify_wallclock_s": 0.4455,
+      "verify_peak_rss_kb": 60124,
+      "attester_exit_code": 1,
+      "attester_verdict": "FAIL"
+    },
+    "fresh_current_format_witness": {
+      "cubin_size_bytes": 10656,
+      "verify_wallclock_s": 0.5064,
+      "verify_peak_rss_kb": 96320,
+      "attester_exit_code": 0,
+      "attester_verdict": "PASS"
+    },
+    "cfg_reconstruct_wallclock_s": 0.2756,
+    "cfg_reconstruct_peak_rss_kb": 96320
+  },
+  "synthetic_scalability_test": {
+    "label": "SYNTHETIC -- N near-duplicate toy kernels (gemm_tile-shaped), not a claim about real-world kernel-count distributions. Generated fresh for this measurement, run through the real discover/rewrite/compile/witness_gen/attester pipeline.",
+    "results": [
+      {
+        "n_kernels": 1,
+        "witness_gen_wallclock_s": 0.5808,
+        "cubin_size_bytes": 4768,
+        "verify_wallclock_s": 0.4436,
+        "verify_peak_rss_kb": 96360,
+        "attester_exit_code": 0,
+        "attester_verdict": "PASS"
+      },
+      {
+        "n_kernels": 2,
+        "witness_gen_wallclock_s": 0.4535,
+        "cubin_size_bytes": 8224,
+        "verify_wallclock_s": 0.4437,
+        "verify_peak_rss_kb": 96556,
+        "attester_exit_code": 0,
+        "attester_verdict": "PASS"
+      },
+      {
+        "n_kernels": 4,
+        "witness_gen_wallclock_s": 0.7165,
+        "cubin_size_bytes": 15008,
+        "verify_wallclock_s": 0.4297,
+        "verify_peak_rss_kb": 96556,
+        "attester_exit_code": 0,
+        "attester_verdict": "PASS"
+      },
+      {
+        "n_kernels": 8,
+        "witness_gen_wallclock_s": 0.718,
+        "cubin_size_bytes": 28576,
+        "verify_wallclock_s": 0.4981,
+        "verify_peak_rss_kb": 96556,
+        "attester_exit_code": 0,
+        "attester_verdict": "PASS"
+      }
+    ]
+  },
+  "note": "Per Phase 1.6 instructions: 'no scaling curve is fit to so few points' -- N=1,2,4,8 are reported as measured points only."
+}

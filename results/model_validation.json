@@ -1,0 +1,61 @@
+{
+  "experiment": "Analytical cost model validation (RP Sec VI.D): C_scrub ~= F / min(b, P*w*f) + L",
+  "hardware": "NVIDIA GeForce RTX 4050 Laptop GPU (sm_89)",
+  "input_file": "results/benchmark_clock64.json",
+  "calibration_method": "Exact 2-point solve of cycles=F/b+L using {full_sm_amplification, reduction} (the two largest-F points, where the model's own reasoning predicts the bandwidth-bound term dominates). {gemm, attention} are held out and PREDICTED, not fit -- this is a falsifiable check, not curve-fitting to every point.",
+  "calibrated_b_bytes_per_cycle": 59.4149,
+  "calibrated_b_GB_per_s": 126.55,
+  "calibrated_L_cycles": 170.24,
+  "calibrated_L_ns": 79.9269,
+  "note_on_b": "b is per-SM shared-store bandwidth implied by the fit; for reference, a documented back-of-envelope figure for Ada-class shared memory is ~128 bytes/clock/SM (32 lanes x 4B, no bank conflicts) -- the fitted value is reported as-derived, not adjusted to match.",
+  "results": [
+    {
+      "kernel": "full_sm_amplification",
+      "role": "calibration",
+      "F_bytes": 96000,
+      "P_threads": 1024,
+      "predicted_cycles": 1786.0,
+      "measured_cycles": 1786.0,
+      "predicted_ns": 838.4977,
+      "measured_ns": 838.4977,
+      "predicted_over_measured_ratio": 1.0,
+      "within_2x": true
+    },
+    {
+      "kernel": "reduction",
+      "role": "calibration",
+      "F_bytes": 16384,
+      "P_threads": 256,
+      "predicted_cycles": 446.0,
+      "measured_cycles": 446.0,
+      "predicted_ns": 209.3897,
+      "measured_ns": 209.3897,
+      "predicted_over_measured_ratio": 1.0,
+      "within_2x": true
+    },
+    {
+      "kernel": "gemm",
+      "role": "held_out_prediction",
+      "F_bytes": 1024,
+      "P_threads": 256,
+      "predicted_cycles": 187.48,
+      "measured_cycles": 133.0,
+      "predicted_ns": 88.0184,
+      "measured_ns": 62.4413,
+      "predicted_over_measured_ratio": 1.4096,
+      "within_2x": true
+    },
+    {
+      "kernel": "attention",
+      "role": "held_out_prediction",
+      "F_bytes": 8192,
+      "P_threads": 64,
+      "predicted_cycles": 308.12,
+      "measured_cycles": 350.0,
+      "predicted_ns": 144.6583,
+      "measured_ns": 164.3192,
+      "predicted_over_measured_ratio": 0.8803,
+      "within_2x": true
+    }
+  ]
+}

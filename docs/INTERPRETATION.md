@@ -129,7 +129,7 @@ cross-kernel residue and must not be so attributed.
 - It does not claim that residue prevalence in the table reflects production
   multi-tenant frequencies.
 - It does not characterize the H100 Confidential Computing target (out of scope
-  for this artifact; see SPEC.md).
+  for this artifact; see [SPEC.md](SPEC.md)).
 - A device not in the table makes no appearance in any claim.
 - The DSE characterization (58-STS / ordering-differential finding, Module 3) is
   toolchain-specific to ptxas 12.8/13.3 and is explicitly excluded from this
