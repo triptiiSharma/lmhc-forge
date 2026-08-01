@@ -1,0 +1,11 @@
+field,value
+case_id,N6
+intended_category,PARTIAL_SIGNATURE_OR_UNDECIDABLE
+cuobjdump_verdict,FULL_SIGNATURE
+nvdisasm_verdict,FULL_SIGNATURE
+cross_tool_agreement,True
+exit_count,1
+last_zero_store_index,166
+first_membar_cta_index,174
+last_bar_sync_index,176
+zero_shared_store_indirect_count,5

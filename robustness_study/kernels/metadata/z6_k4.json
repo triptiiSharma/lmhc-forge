@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K4",
+  "context_name": "tiled_gemm_like",
+  "context_based_on": "test_kernels.cu: gemm_tile; a_tile (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z6_k4",
+  "source_file": "kernels/generated/z6_k4.cu",
+  "source_hash_sha256": "c1c114ae11e104c44b763257800a0d782261380423b1b2dcd9b246f19f6eaee1"
+}

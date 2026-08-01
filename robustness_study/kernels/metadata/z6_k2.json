@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K2",
+  "context_name": "fill_use_then_scrub",
+  "context_based_on": "dse_test.cu: scrub_naive / scrub_hardened (exact shape)",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z6_k2",
+  "source_file": "kernels/generated/z6_k2.cu",
+  "source_hash_sha256": "c0f5e9b97e9b546b037271d2282e0e574ed429fdbba9d8b03a31979710d52b05"
+}

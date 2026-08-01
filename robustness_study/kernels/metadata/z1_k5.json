@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z1",
+  "construct_name": "plain_zeroing_loop",
+  "construct_role": "primary_variable",
+  "expected_structural_requirement": "zero-stores present or eliminated (compiler-dependent; this is what's measured)",
+  "context_id": "K5",
+  "context_name": "attention_style",
+  "context_based_on": "test_kernels.cu: attention_fwd; smem_qk (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 64,
+  "sbuf_nwords": 2048,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z1_k5",
+  "source_file": "kernels/generated/z1_k5.cu",
+  "source_hash_sha256": "69e0c1cbc2becd08d3769b5dadaafddc5d9f00c382e110ffdd38840cb304976f"
+}

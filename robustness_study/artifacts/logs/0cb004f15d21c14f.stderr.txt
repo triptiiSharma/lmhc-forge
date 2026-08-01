@@ -1,0 +1,1 @@
+ptxas warning : For profile sm_89 adjusting per thread register count of 16 to lower bound of 24

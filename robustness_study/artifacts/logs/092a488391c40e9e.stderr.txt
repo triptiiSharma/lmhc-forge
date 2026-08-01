@@ -1,0 +1,6 @@
+/mnt/c/Tripti Sharma/lmhc-forge/robustness_study/kernels/generated/z0_k0.cu(12): warning #177-D: variable "sbuf" was declared but never referenced
+      __attribute__((shared)) uint32_t sbuf[1024];
+                                       ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+

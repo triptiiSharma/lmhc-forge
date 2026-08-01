@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K0",
+  "context_name": "pure_dead_allocation",
+  "context_based_on": "dse_minimal.cu: pure_dead_naive / pure_dead_volatile",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z6_k0",
+  "source_file": "kernels/generated/z6_k0.cu",
+  "source_hash_sha256": "4ad8086e63d83bb8e3332955ad78099a039d54a882f840bab7fb5284fa9474fb"
+}

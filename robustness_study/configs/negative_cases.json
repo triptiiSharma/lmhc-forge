@@ -1,0 +1,21 @@
+{
+  "name": "negative_cases",
+  "description": "PLAN.md §4 / task §14: binary-only detection corpus N0-N12 for evaluating the structural-signature checker. N0, N1, N2, N12 are references to core-matrix cells (no duplicate compilation); N3-N9, N11 need small dedicated sources; N10 is compiled but never executed.",
+  "status": "DESIGN_ONLY_NOT_YET_BUILT",
+  "cases": [
+    {"id": "N0",  "case": "no scrub",                              "source": "core_matrix_reference", "construct": "Z0", "context": "K2"},
+    {"id": "N1",  "case": "complete hardened scrub",                "source": "core_matrix_reference", "construct": "Z5", "context": "K2"},
+    {"id": "N2",  "case": "zero stores present, fence missing",     "source": "core_matrix_reference", "construct": "Z4", "context": "K2"},
+    {"id": "N3",  "case": "zero stores + fence present, final barrier missing", "source": "dedicated", "note": "Z5 variant with trailing __syncthreads() removed"},
+    {"id": "N4",  "case": "barrier present, scrub stores absent",   "source": "dedicated", "note": "Z0 + spurious __threadfence_block()+__syncthreads(), no zero-store loop"},
+    {"id": "N5",  "case": "scrub instructions present, wrong order","source": "dedicated", "note": "__syncthreads() before the volatile zero-store loop, __threadfence_block() after"},
+    {"id": "N6",  "case": "one relevant exit uncovered",            "source": "dedicated", "note": "two-kernel cubin, only one of two sensitive_regions kernels scrubbed"},
+    {"id": "N7",  "case": "nonzero store replacing zero store",     "source": "dedicated", "note": "Z5 variant storing 0xAAu sentinel instead of 0u"},
+    {"id": "N8",  "case": "full signature plus unrelated stores",   "source": "dedicated", "note": "Z5xK2 plus an extra unrelated unscrubbed shared buffer"},
+    {"id": "N9",  "case": "unsupported/unusual instruction encoding","source": "core_matrix_reference", "construct": "Z5", "context": "K2", "note": "compiled for sm_90 or sm_75 where zero-store mnemonic may differ textually"},
+    {"id": "N10", "case": "multi-exit control flow",                "source": "dedicated", "note": "deliberate early-return kernel; compiled/disassembled only, NEVER launched on hardware per task §8/§25"},
+    {"id": "N11", "case": "kernel missing from binary",             "source": "dedicated", "note": "sensitive_regions names a kernel not present in the cubin"},
+    {"id": "N12", "case": "compilation removed pure-dead plain scrub","source": "core_matrix_reference", "construct": "Z1", "context": "K0"}
+  ],
+  "implementation_status": "Phase 6 (build_negative_corpus.py) — not yet implemented; this file records the design only."
+}

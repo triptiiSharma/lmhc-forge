@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z2",
+  "construct_name": "volatile_zeroing_loop",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present; no fence/barrier ordering signature",
+  "context_id": "K4",
+  "context_name": "tiled_gemm_like",
+  "context_based_on": "test_kernels.cu: gemm_tile; a_tile (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z2_k4",
+  "source_file": "kernels/generated/z2_k4.cu",
+  "source_hash_sha256": "2589029f1174fd72bca9777fb0c092a8c5d237893c67c2513bf2af41c9883085"
+}

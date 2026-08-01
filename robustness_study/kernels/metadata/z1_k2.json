@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z1",
+  "construct_name": "plain_zeroing_loop",
+  "construct_role": "primary_variable",
+  "expected_structural_requirement": "zero-stores present or eliminated (compiler-dependent; this is what's measured)",
+  "context_id": "K2",
+  "context_name": "fill_use_then_scrub",
+  "context_based_on": "dse_test.cu: scrub_naive / scrub_hardened (exact shape)",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z1_k2",
+  "source_file": "kernels/generated/z1_k2.cu",
+  "source_hash_sha256": "3e6f2fa3cf04bfee75b895f2a6d19bdbdbb12fcbb9ac577bd81bb49deac9485d"
+}

@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z3",
+  "construct_name": "plain_loop_plus_barrier",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present-or-eliminated + BAR.SYNC; no MEMBAR.SC.CTA",
+  "context_id": "K2",
+  "context_name": "fill_use_then_scrub",
+  "context_based_on": "dse_test.cu: scrub_naive / scrub_hardened (exact shape)",
+  "block_threads": 32,
+  "sbuf_nwords": 1024,
+  "sbuf_elem_type": "uint32_t",
+  "kernel_function_name": "kernel_z3_k2",
+  "source_file": "kernels/generated/z3_k2.cu",
+  "source_hash_sha256": "b5eb7e5c0ba13456ced4ef116327ee936b84d9c0807a0525d38d15067e26dc1f"
+}

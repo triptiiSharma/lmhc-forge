@@ -1,0 +1,176 @@
+{
+  "total_records": 2018,
+  "by_compile_status": {
+    "COMPILE_OK": 2018
+  },
+  "by_compile_status_and_construct": {
+    "Z0": {
+      "COMPILE_OK": 288
+    },
+    "Z1": {
+      "COMPILE_OK": 289
+    },
+    "Z2": {
+      "COMPILE_OK": 289
+    },
+    "Z5": {
+      "COMPILE_OK": 288
+    },
+    "Z6": {
+      "COMPILE_OK": 288
+    },
+    "Z3": {
+      "COMPILE_OK": 288
+    },
+    "Z4": {
+      "COMPILE_OK": 288
+    }
+  },
+  "by_compile_status_and_context": {
+    "K0": {
+      "COMPILE_OK": 337
+    },
+    "K2": {
+      "COMPILE_OK": 336
+    },
+    "K3": {
+      "COMPILE_OK": 337
+    },
+    "K1": {
+      "COMPILE_OK": 336
+    },
+    "K4": {
+      "COMPILE_OK": 336
+    },
+    "K5": {
+      "COMPILE_OK": 336
+    }
+  },
+  "by_compile_status_and_arch": {
+    "sm_86": {
+      "COMPILE_OK": 336
+    },
+    "sm_89": {
+      "COMPILE_OK": 338
+    },
+    "sm_75": {
+      "COMPILE_OK": 336
+    },
+    "sm_80": {
+      "COMPILE_OK": 336
+    },
+    "sm_87": {
+      "COMPILE_OK": 336
+    },
+    "sm_90": {
+      "COMPILE_OK": 336
+    }
+  },
+  "by_compile_status_and_toolkit": {
+    "cuda-12.8": {
+      "COMPILE_OK": 1010
+    },
+    "cuda-13.3": {
+      "COMPILE_OK": 1008
+    }
+  },
+  "checker_verdict_counts": {
+    "ABSENT": 481,
+    "PARTIAL_SIGNATURE": 865,
+    "STORE_ONLY": 96,
+    "FULL_SIGNATURE": 576
+  },
+  "checker_verdict_by_construct": {
+    "Z0": {
+      "ABSENT": 288
+    },
+    "Z1": {
+      "ABSENT": 97,
+      "PARTIAL_SIGNATURE": 192
+    },
+    "Z2": {
+      "STORE_ONLY": 96,
+      "PARTIAL_SIGNATURE": 193
+    },
+    "Z5": {
+      "FULL_SIGNATURE": 288
+    },
+    "Z6": {
+      "FULL_SIGNATURE": 288
+    },
+    "Z3": {
+      "ABSENT": 96,
+      "PARTIAL_SIGNATURE": 192
+    },
+    "Z4": {
+      "PARTIAL_SIGNATURE": 288
+    }
+  },
+  "checker_verdict_by_context": {
+    "K0": {
+      "ABSENT": 145,
+      "STORE_ONLY": 48,
+      "FULL_SIGNATURE": 96,
+      "PARTIAL_SIGNATURE": 48
+    },
+    "K2": {
+      "ABSENT": 48,
+      "PARTIAL_SIGNATURE": 192,
+      "FULL_SIGNATURE": 96
+    },
+    "K3": {
+      "PARTIAL_SIGNATURE": 193,
+      "ABSENT": 48,
+      "FULL_SIGNATURE": 96
+    },
+    "K1": {
+      "ABSENT": 144,
+      "STORE_ONLY": 48,
+      "PARTIAL_SIGNATURE": 48,
+      "FULL_SIGNATURE": 96
+    },
+    "K4": {
+      "ABSENT": 48,
+      "PARTIAL_SIGNATURE": 192,
+      "FULL_SIGNATURE": 96
+    },
+    "K5": {
+      "ABSENT": 48,
+      "PARTIAL_SIGNATURE": 192,
+      "FULL_SIGNATURE": 96
+    }
+  },
+  "scalability": {
+    "compile_time_ms": {
+      "n": 2018,
+      "min": 275,
+      "max": 773,
+      "mean": 321.29,
+      "median": 313.0
+    },
+    "cubin_size_bytes": {
+      "n": 2018,
+      "min": 2600,
+      "max": 15360,
+      "mean": 5696.48,
+      "median": 5648.0
+    },
+    "sass_size_bytes": {
+      "n": 2018,
+      "min": 1663,
+      "max": 150147,
+      "mean": 36115.05,
+      "median": 34225.0
+    },
+    "analysis_time_ms": {
+      "n": 2018,
+      "min": 2,
+      "max": 29,
+      "mean": 6.48,
+      "median": 6.0
+    }
+  },
+  "manual_review_status_counts": {
+    "not_reviewed": 2018
+  }
+}

@@ -1,0 +1,68 @@
+import json
+
+data = {
+    "terminology": "binary structural-signature checker; not a CFG verifier, not a "
+                    "post-dominance proof, not a dynamic-execution proof, not a "
+                    "residue-recovery proof, not a human-validated classifier",
+    "core_corpus": {
+        "attempted_configurations": 2016,
+        "compile_ok": 2016, "compile_failed": 0, "compile_unsupported": 0,
+        "category_distribution": {"FULL_SIGNATURE": 576, "PARTIAL_SIGNATURE": 864,
+                                    "STORE_ONLY": 96, "ABSENT": 480, "UNDECIDABLE": 0},
+        "compile_time_ms": {"median": 313, "p95": 368},
+        "analysis_time_ms": {"median": 6, "p95": 13},
+        "storage_mb": 89,
+    },
+    "cross_tool_validation": {
+        "pilot_size": 96, "pilot_category_agreement_pct": 100.0,
+        "full_pass_size": 2016, "category_agreement_count": 2016,
+        "category_agreement_pct": 100.0,
+        "feature_agreement_pct": {
+            "zero_shared_store_direct_count": 100.0, "zero_shared_store_indirect_count": 100.0,
+            "zero_shared_store_count": 100.0, "membar_count": 100.0, "membar_cta_count": 100.0,
+            "bar_sync_count": 100.0, "exit_count": 100.0, "branch_count": 100.0,
+        },
+        "disagreement_count": 0, "unsupported_count": 0,
+        "nvdisasm_undecidable_count": 0, "cuobjdump_undecidable_count": 0,
+        "nvdisasm_analysis_time_ms": {"median": 248, "p95": 379},
+    },
+    "controlled_cases": {
+        "total_cases": 13, "total_configurations": 55,
+        "real_compiled_case_count": 54, "real_binary_input_case_count": 1,
+        "synthetic_test_only_pooled": 0,
+        "dedicated_case_configs": 48, "reference_case_configs": 7,
+        "conforming_configs": 47, "non_conforming_configs": 8,
+        "non_conforming_note": "all 8 are case N6; a genuine, evidenced finding "
+                                "(ptxas predicated a divergent early-return to a single "
+                                "EXIT), not a defect -- see PHASE5_CONTROLLED_CASES.md",
+    },
+    "reproducibility": {
+        "configurations": 50, "repeats_per_configuration": 3, "total_repeat_compiles": 150,
+        "byte_identical_count": 150, "byte_identical_pct": 100.0,
+        "category_differences": 0, "feature_differences": 0, "instruction_stream_differences": 0,
+    },
+    "runtime_sanity": {
+        "diagnostic_variants": 18, "repeats_per_variant": 5, "total_launches": 90,
+        "launch_success_count": 90, "sync_success_count": 90, "computation_correct_count": 90,
+        "hardware": "RTX 4050 Laptop GPU (sm_89)", "toolkit": "cuda-12.8",
+        "z0_nonzero_words": {"K2": 1024, "K3": 256, "K4": 219},
+        "scrub_constructs_nonzero_words": 0,
+        "scrub_constructs_tested": ["Z1", "Z2", "Z4", "Z5", "Z6"],
+    },
+    "tests": {"total": 49, "passed": 49, "failed": 0},
+    "limitations": [
+        "no human-labelled binary ground truth",
+        "no precision/recall/F1 claim",
+        "no human-validated false-accept estimate",
+        "no complete CFG or post-dominance proof",
+        "compile-only evidence for targets without local hardware (sm_75/80/86/87/90)",
+        "nvdisasm and cuobjdump are independent parsing paths over the same NVIDIA binary, "
+        "not independent semantic ground truth",
+        "runtime diagnostic binaries differ from the core corpus artifacts",
+        "structural evidence does not itself prove absence of recoverable residue",
+    ],
+}
+
+with open("results/phase6_structural_reliability.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2)
+print("wrote results/phase6_structural_reliability.json")

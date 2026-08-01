@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K3",
+  "context_name": "reduction_like",
+  "context_based_on": "test_kernels.cu: reduction_sum; empirically verified correct on RTX 4050 for Z2 (PLAN.md \u00a79)",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z6_k3",
+  "source_file": "kernels/generated/z6_k3.cu",
+  "source_hash_sha256": "91e0d3778accf24d4cbd43a2337cc0a6fd8c4bb607f016f288e6d7268b83dbec"
+}

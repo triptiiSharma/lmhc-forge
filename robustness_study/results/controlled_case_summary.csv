@@ -1,0 +1,56 @@
+case_id,category,artifact_id,toolkit,ptxas_optimization,target_arch,compile_status,intended_category,cuobjdump_verdict,nvdisasm_verdict,cross_tool_agreement,conforms_to_intended,safe_to_execute,intended_description
+N3,REAL_COMPILED_CASE,eecc27ad97788ef5,cuda-12.8,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,18a918b5d1082d96,cuda-12.8,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,ff2a3bd7d5dae5f8,cuda-12.8,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,f1c2f21858dac1d2,cuda-12.8,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,c48ec55dc4dbd7df,cuda-13.3,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,de50eb0eab651e4b,cuda-13.3,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,4c3deef7bdb666aa,cuda-13.3,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N3,REAL_COMPILED_CASE,cafebf0131ccb65d,cuda-13.3,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,True,"zero stores and fence present, final barrier absent"
+N4,REAL_COMPILED_CASE,de1d6e2d175b9d77,cuda-12.8,0,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,7448202df058474c,cuda-12.8,0,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,ed2d79f86655ec28,cuda-12.8,3,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,8108a8ce981d0141,cuda-12.8,3,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,752f0686ca7da91e,cuda-13.3,0,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,2da4066d8b64b5cb,cuda-13.3,0,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,4e00adc9aa6a1674,cuda-13.3,3,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N4,REAL_COMPILED_CASE,740fe3c278503687,cuda-13.3,3,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,"barrier present, scrub stores absent"
+N5,REAL_COMPILED_CASE,692cf612286ae330,cuda-12.8,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,6fe9311cef04738c,cuda-12.8,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,d92a6b5e2080f798,cuda-12.8,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,2bf1fb049be13e04,cuda-12.8,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,1448a1ad9e2fde27,cuda-13.3,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,c8dd7bf410c3ddfb,cuda-13.3,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,389b48ef728a51c5,cuda-13.3,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N5,REAL_COMPILED_CASE,e264094aa621c8cc,cuda-13.3,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,PARTIAL_SIGNATURE,True,True,False,"stores, fence, barrier present in invalid order"
+N6,REAL_COMPILED_CASE,afce917b806cb3eb,cuda-12.8,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,86d150b01fa842cc,cuda-12.8,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,808442adc9be4379,cuda-12.8,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,8c74d78c29ab9834,cuda-12.8,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,1b5d8ba1001be7aa,cuda-13.3,0,sm_86,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,d27f1e068a2e800e,cuda-13.3,0,sm_89,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,08b3105b4dfc7f49,cuda-13.3,3,sm_86,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N6,REAL_COMPILED_CASE,4ce8e5c841da242d,cuda-13.3,3,sm_89,COMPILE_OK,PARTIAL_SIGNATURE_OR_UNDECIDABLE,FULL_SIGNATURE,FULL_SIGNATURE,True,False,False,"multi-exit, one cleanup path intentionally uncovered"
+N7,REAL_COMPILED_CASE,051d7ce7ce9b93ad,cuda-12.8,0,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,0c154954484864a5,cuda-12.8,0,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,02408ae3833d58a6,cuda-12.8,3,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,2fbf013e551f0a3c,cuda-12.8,3,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,747ebe878ddd6a80,cuda-13.3,0,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,dea4450ee94e0264,cuda-13.3,0,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,b4ae00ba3b863021,cuda-13.3,3,sm_86,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N7,REAL_COMPILED_CASE,fda3336198e22860,cuda-13.3,3,sm_89,COMPILE_OK,ABSENT,ABSENT,ABSENT,True,True,True,intended scrub stores write a nonzero value (0xAA) -- the checker must not be fooled by fence+barrier presence into treating a nonzero store as a zero-store; correct behavior is ABSENT despite fence/barrier being present
+N8,REAL_COMPILED_CASE,591e715b0866c910,cuda-12.8,0,sm_86,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,1d94e563461e88c7,cuda-12.8,0,sm_89,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,46d5672dbe0d1176,cuda-12.8,3,sm_86,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,4d41833825325b21,cuda-12.8,3,sm_89,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,4036f972c6e59f13,cuda-13.3,0,sm_86,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,69672092c422a8ae,cuda-13.3,0,sm_89,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,f027d62f5251105b,cuda-13.3,3,sm_86,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N8,REAL_COMPILED_CASE,d437347ea483cda5,cuda-13.3,3,sm_89,COMPILE_OK,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,True,full signature plus unrelated shared-memory stores
+N0,REAL_COMPILED_CASE,09ae942d0824dbc4,cuda-12.8,0,sm_86,N/A,ABSENT,ABSENT,ABSENT,True,True,,no scrub absent
+N1,REAL_COMPILED_CASE,86e920156718d4a2,cuda-12.8,0,sm_86,N/A,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,,complete hardened recognized signature
+N2,REAL_COMPILED_CASE,67da7a670d7f382f,cuda-12.8,0,sm_86,N/A,STORE_ONLY,STORE_ONLY,STORE_ONLY,True,True,,"zero stores present, fence absent"
+N9,REAL_COMPILED_CASE,b35dcda3fffcc125,cuda-12.8,0,sm_75,N/A,,FULL_SIGNATURE,FULL_SIGNATURE,True,True,,valid register-mediated zero encoding (real ptxas-O0 form)
+N10,REAL_COMPILED_CASE,b35dcda3fffcc125,cuda-12.8,0,sm_75,N/A,FULL_SIGNATURE,FULL_SIGNATURE,FULL_SIGNATURE,True,True,,"multiple-exit control flow, intended cleanup structure present"
+N12,REAL_COMPILED_CASE,8131f5bd26f914e2,cuda-12.8,0,sm_86,N/A,ABSENT,ABSENT,ABSENT,True,True,,pure-dead plain scrub eliminated by compilation
+N11,REAL_BINARY_INPUT_CASE,86e920156718d4a2,,,,,UNDECIDABLE,UNDECIDABLE,,,True,,requested/nominated kernel absent from the binary (witness names a kernel not present in the cubin)

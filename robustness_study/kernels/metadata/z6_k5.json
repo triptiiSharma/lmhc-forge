@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z6",
+  "construct_name": "inline_ptx_hardened",
+  "construct_role": "intended_full_signature",
+  "expected_structural_requirement": "zero-stores + MEMBAR.SC.CTA + BAR.SYNC, in order, before EXIT",
+  "context_id": "K5",
+  "context_name": "attention_style",
+  "context_based_on": "test_kernels.cu: attention_fwd; smem_qk (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 64,
+  "sbuf_nwords": 2048,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z6_k5",
+  "source_file": "kernels/generated/z6_k5.cu",
+  "source_hash_sha256": "211ffbad3b4ed66abbbb7887b853ed8705d9ce1e998325db2e3fd69b76324dc5"
+}

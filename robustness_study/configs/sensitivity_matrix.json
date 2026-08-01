@@ -1,0 +1,22 @@
+{
+  "name": "sensitivity",
+  "description": "PLAN.md §11 / task §17: secondary factorial, Phase 7 only, run after core matrix (Phase 4) and its validation (Phase 5-6) pass. NOT executed by Phase 2 scaffolding — config recorded now for design completeness.",
+  "status": "DESIGN_ONLY_NOT_YET_RUN",
+  "host_optimization": "-O3",
+  "constructs": ["Z1", "Z2", "Z5", "Z6"],
+  "contexts": ["K0", "K2", "K3"],
+  "buffer_sizes_words": [256, 1024, 4096, 8192],
+  "block_sizes": [32, 64, 128, 256],
+  "ptxas_opt_levels": [0, 3],
+  "archs": ["sm_86", "sm_89"],
+  "toolkits": [
+    {
+      "id": "cuda-12.8",
+      "nvcc": "/usr/local/cuda-12.8/bin/nvcc",
+      "cuobjdump": "/usr/local/cuda-12.8/bin/cuobjdump",
+      "host_compiler": "gcc-14"
+    }
+  ],
+  "expected_artifact_count": 768,
+  "note": "4 constructs x 3 contexts x 4 buffer sizes x 4 block sizes x 2 opt x 2 arch = 768, per task §17. Requires generate_kernels.py to gain buffer/block-size parametrization beyond the fixed per-context values used in kernel_lib.py for the core matrix -- a Phase 7 implementation task, not done in Phase 2."
+}

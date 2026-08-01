@@ -1,0 +1,15 @@
+{
+  "construct_id": "Z3",
+  "construct_name": "plain_loop_plus_barrier",
+  "construct_role": "partial_case",
+  "expected_structural_requirement": "zero-stores present-or-eliminated + BAR.SYNC; no MEMBAR.SC.CTA",
+  "context_id": "K4",
+  "context_name": "tiled_gemm_like",
+  "context_based_on": "test_kernels.cu: gemm_tile; a_tile (renamed sbuf) is the confidential/sensitive one",
+  "block_threads": 256,
+  "sbuf_nwords": 256,
+  "sbuf_elem_type": "float",
+  "kernel_function_name": "kernel_z3_k4",
+  "source_file": "kernels/generated/z3_k4.cu",
+  "source_hash_sha256": "a3afeafb6c35e8bfc4368e080c9b158be7e416201adb5792584b16c6fe617319"
+}
