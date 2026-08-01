@@ -1,0 +1,8 @@
+overclaiming_wording,why_unsupported,safe_alternative
+The checker is X% accurate.,no independent human ground truth was collected,Do not state an accuracy percentage anywhere.
+False-accept rate is Y%.,"requires human-validated ground truth, not available","Report cross-tool agreement or controlled-case conformance instead, never as a false-accept rate."
+FULL_SIGNATURE proves every thread/warp path executes the scrub.,"case N6 is direct, compiled counter-evidence: predication can collapse a source-level uncovered path into a single EXIT the checker cannot distinguish",State the structural-signature scope limitation explicitly whenever FULL_SIGNATURE is mentioned.
+The generated binaries are secure.,structural presence of a signature is not a security property claim,Describe only the structural category observed.
+No residue can be recovered.,this study ran no residue-recovery/Exposure-Index experiment,Do not make any residue-recovery claim from this study's evidence.
+All NVIDIA/AMD/Intel GPUs are protected.,only sm_89 (one physical GPU) has any runtime evidence; sm_75/80/86/87/90 are compile-target only; no AMD/Intel evidence exists in this study,"Scope every claim to the specific architecture(s) actually tested, and label non-sm_89 targets as compile-only."
+nvdisasm independently confirms the checker is correct.,nvdisasm and cuobjdump both interpret the same NVIDIA cubin -- agreement is not independent semantic ground truth,"Describe as cross-tool agreement between two parsing paths, never as independent confirmation of correctness."
