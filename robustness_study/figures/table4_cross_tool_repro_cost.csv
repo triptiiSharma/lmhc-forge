@@ -1,0 +1,10 @@
+Metric,Value
+Cross-tool category agreement,2016/2016 (100.0%)
+Cross-tool feature agreement (8 features),2016/2016 each (100%)
+Cross-tool disagreements,0
+nvdisasm analysis time (median / p95),248ms / 379ms
+cuobjdump-path analysis time (median / p95),6ms / 13ms
+Compile time (median / p95),313ms / 368ms
+Reproducibility: configurations x repeats,50 x 3 = 150
+Reproducibility: byte-identical rate,150/150 (100%)
+Total core-corpus storage,89 MB

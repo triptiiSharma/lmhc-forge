@@ -1,0 +1,8 @@
+stage_index,stage_name,stage_detail
+0,Source variant,kernels/generated/*.cu (7 constructs x 6 contexts)
+1,Compilation matrix,nvcc + ptxas 2 toolkits x 4 opt x 6 arch
+2,cubin,compiled GPU binary
+3,cuobjdump / nvdisasm,two independent disassembly paths
+4,Feature extraction,"zero-store, fence, barrier, exit counts"
+5,Structural category,FULL_SIGNATURE / PARTIAL / STORE_ONLY / ABSENT / UNDECIDABLE
+6,Deployment interpretation,static evidence only; not a dynamic-path proof

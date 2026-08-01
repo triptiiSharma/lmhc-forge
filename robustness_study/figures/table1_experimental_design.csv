@@ -1,0 +1,11 @@
+Dimension,Values,Count
+Zeroization constructs,"Z0-Z6 (no-scrub, plain, volatile, plain+barrier, volatile+barrier, hardened, inline-PTX hardened)",7
+Kernel contexts,"K0-K5 (pure-dead, fill-then-scrub, fill/use/scrub, reduction, tiled-GEMM, attention-style)",6
+ptxas optimization levels,"O0, O1, O2, O3",4
+Architecture targets,"sm_75, sm_80, sm_86, sm_87, sm_89, sm_90",6
+CUDA toolkits,"12.8 (V12.8.90/93), 13.3 (V13.3.29/33)",2
+Core matrix size,7 x 6 x 4 x 6 x 2,2016
+Physical GPU hardware,"RTX 4050 Laptop (Ada, sm_89)",1
+Controlled cases,N0-N12,13 (55 configurations)
+Reproducibility subset,stratified core configurations x 3 repeats,50 x 3 = 150
+Runtime sanity subset,"6 constructs x 3 contexts x 5 repeats, sm_89 only",18 x 5 = 90
